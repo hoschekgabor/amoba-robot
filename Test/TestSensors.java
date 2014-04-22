@@ -88,7 +88,7 @@ public class TestSensors {
 		while (Button.ESCAPE.isDown())
 			;
 	}
-// Ezt csak ellenorzes miatt
+	
 	private static void motorTest() {
 		String degrees[] = { "30", "60", "90", "120", "180", "360" };
 		LCD.clear();
