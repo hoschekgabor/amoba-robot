@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="AmobaRobotModel">
+  <elementImport xmi:id="_DYCCcMp_EeO-VrwwfpQBVw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_DYDQkMp_EeO-VrwwfpQBVw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_DYDQkcp_EeO-VrwwfpQBVw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="UseCaseView">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_CFKXQMp9EeO-VrwwfpQBVw" name="RobotBekapcsolása">
+      <eAnnotations xmi:id="_CFKXQcp9EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_CFKXQsp9EeO-VrwwfpQBVw" key="documentation" value="UC01"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_EuQgcMp9EeO-VrwwfpQBVw" name="JátékIndítása" classifierBehavior="_8EobYMqAEeO-VrwwfpQBVw">
+      <eAnnotations xmi:id="_EuQgccp9EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_EuQgcsp9EeO-VrwwfpQBVw" key="documentation" value="UC02&#xA;&#xA;Parti szám kiválasztása&#xA;Játék indítása&#xA;"/>
+      </eAnnotations>
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_8EobYMqAEeO-VrwwfpQBVw" name="JátékIndításaDetail">
+        <ownedAttribute xmi:id="_DgNcIMqBEeO-VrwwfpQBVw" name="Property1" type="_bDEUYMp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_NmP4AMqBEeO-VrwwfpQBVw" name="Property2" type="_bDFiksp_EeO-VrwwfpQBVw"/>
+        <ownedConnector xmi:id="_DgODMMqBEeO-VrwwfpQBVw" name="Connector1">
+          <end xmi:id="_DgPRUMqBEeO-VrwwfpQBVw" role="_DgNcIMqBEeO-VrwwfpQBVw"/>
+          <end xmi:id="_NmQfEMqBEeO-VrwwfpQBVw" role="_NmP4AMqBEeO-VrwwfpQBVw"/>
+        </ownedConnector>
+        <lifeline xmi:id="_-KMZsMqAEeO-VrwwfpQBVw" name="" represents="_DgNcIMqBEeO-VrwwfpQBVw" coveredBy="_SUUJoMqBEeO-VrwwfpQBVw _WDMPIMqBEeO-VrwwfpQBVw _RJTIAMqBEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_-wx4kMqAEeO-VrwwfpQBVw" name="robot" represents="_NmP4AMqBEeO-VrwwfpQBVw" coveredBy="_SUUwsMqBEeO-VrwwfpQBVw _WDM2MMqBEeO-VrwwfpQBVw _STbY0MqBEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WDMPIMqBEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification3" covered="_-KMZsMqAEeO-VrwwfpQBVw" event="_WDNdQMqBEeO-VrwwfpQBVw" message="_WDNdQcqBEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WDM2MMqBEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification4" covered="_-wx4kMqAEeO-VrwwfpQBVw" event="_WDNdQMqBEeO-VrwwfpQBVw" message="_WDNdQcqBEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SUUJoMqBEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification1" covered="_-KMZsMqAEeO-VrwwfpQBVw" event="_SUV-0MqBEeO-VrwwfpQBVw" message="_SUXM8MqBEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SUUwsMqBEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification2" covered="_-wx4kMqAEeO-VrwwfpQBVw" event="_SUV-0MqBEeO-VrwwfpQBVw" message="_SUXM8MqBEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_RJTIAMqBEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification1" covered="_-KMZsMqAEeO-VrwwfpQBVw" start="_SUUJoMqBEeO-VrwwfpQBVw" finish="_WDMPIMqBEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_STbY0MqBEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification2" covered="_-wx4kMqAEeO-VrwwfpQBVw" start="_SUUwsMqBEeO-VrwwfpQBVw" finish="_WDM2MMqBEeO-VrwwfpQBVw"/>
+        <message xmi:id="_SUXM8MqBEeO-VrwwfpQBVw" name="printMenu" receiveEvent="_SUUwsMqBEeO-VrwwfpQBVw" sendEvent="_SUUJoMqBEeO-VrwwfpQBVw">
+          <eAnnotations xmi:id="_eUZ3YMqBEeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+            <details xmi:id="_eUaecMqBEeO-VrwwfpQBVw" key="documentation" value="Partik számának bekérése."/>
+          </eAnnotations>
+        </message>
+        <message xmi:id="_WDNdQcqBEeO-VrwwfpQBVw" name="printMenu" receiveEvent="_WDM2MMqBEeO-VrwwfpQBVw" sendEvent="_WDMPIMqBEeO-VrwwfpQBVw">
+          <eAnnotations xmi:id="_iR9SEMqBEeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+            <details xmi:id="_iR95IMqBEeO-VrwwfpQBVw" key="documentation" value="Kezdő játékos bekérése."/>
+          </eAnnotations>
+        </message>
+      </ownedBehavior>
+      <include xmi:id="_EuQgc8p9EeO-VrwwfpQBVw" name="Include1" addition="_EuQgdMp9EeO-VrwwfpQBVw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_EuQgdMp9EeO-VrwwfpQBVw" name="PartiIndítása" classifierBehavior="_me9eAMqBEeO-VrwwfpQBVw">
+      <eAnnotations xmi:id="_EuQgdcp9EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_EuQgdsp9EeO-VrwwfpQBVw" key="documentation" value="UC06"/>
+      </eAnnotations>
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_me9eAMqBEeO-VrwwfpQBVw" name="PartiIndításaDetail">
+        <ownedAttribute xmi:id="_1gOdwMqBEeO-VrwwfpQBVw" name="Property1" type="_bDE7ucp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_3dro8MqBEeO-VrwwfpQBVw" name="Property2" type="_bDE7psp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_7cj5UMqBEeO-VrwwfpQBVw" name="Property3" type="_bDFioMp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_-TaxsMqBEeO-VrwwfpQBVw" name="Property4" type="_bDFiksp_EeO-VrwwfpQBVw"/>
+        <ownedConnector xmi:id="_vAkSsMqBEeO-VrwwfpQBVw" name="Connector1">
+          <end xmi:id="_vAk5wMqBEeO-VrwwfpQBVw" role="_Mjw8wcqAEeO-VrwwfpQBVw"/>
+          <end xmi:id="_1gPE0MqBEeO-VrwwfpQBVw" role="_1gOdwMqBEeO-VrwwfpQBVw"/>
+          <end xmi:id="_3dro8cqBEeO-VrwwfpQBVw" role="_3dro8MqBEeO-VrwwfpQBVw"/>
+          <end xmi:id="_7cj5UcqBEeO-VrwwfpQBVw" role="_7cj5UMqBEeO-VrwwfpQBVw"/>
+          <end xmi:id="_-TaxscqBEeO-VrwwfpQBVw" role="_-TaxsMqBEeO-VrwwfpQBVw"/>
+        </ownedConnector>
+        <lifeline xmi:id="_pAtCAMqBEeO-VrwwfpQBVw" name="" represents="_Mjw8wcqAEeO-VrwwfpQBVw" coveredBy="_FWcIgMqCEeO-VrwwfpQBVw _njeZkMqCEeO-VrwwfpQBVw _DAZeMMqCEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_pAtCAcqBEeO-VrwwfpQBVw" name="match" represents="_1gOdwMqBEeO-VrwwfpQBVw" coveredBy="_FWdWoMqCEeO-VrwwfpQBVw _OcdR0MqCEeO-VrwwfpQBVw _JjMc0MqCEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_pAtCAsqBEeO-VrwwfpQBVw" name="board" represents="_3dro8MqBEeO-VrwwfpQBVw" coveredBy="_Ocef8MqCEeO-VrwwfpQBVw _do8qIMqCEeO-VrwwfpQBVw _cMR30MqCEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_pAtCA8qBEeO-VrwwfpQBVw" name="listOfStep" represents="_7cj5UMqBEeO-VrwwfpQBVw" coveredBy="_do94QMqCEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_pAtpEMqBEeO-VrwwfpQBVw" name="robot" represents="_-TaxsMqBEeO-VrwwfpQBVw" coveredBy="_njfnsMqCEeO-VrwwfpQBVw _nihXUMqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_njeZkMqCEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification7" covered="_pAtCAMqBEeO-VrwwfpQBVw" event="_njgOwMqCEeO-VrwwfpQBVw" message="_njgOwcqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_njfnsMqCEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification8" covered="_pAtpEMqBEeO-VrwwfpQBVw" event="_njgOwMqCEeO-VrwwfpQBVw" message="_njgOwcqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_do8qIMqCEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification5" covered="_pAtCAsqBEeO-VrwwfpQBVw" event="_do-fUMqCEeO-VrwwfpQBVw" message="_do-fUcqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_do94QMqCEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification6" covered="_pAtCA8qBEeO-VrwwfpQBVw" event="_do-fUMqCEeO-VrwwfpQBVw" message="_do-fUcqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OcdR0MqCEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification3" covered="_pAtCAcqBEeO-VrwwfpQBVw" event="_OcfHAMqCEeO-VrwwfpQBVw" message="_OcfHAcqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ocef8MqCEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification4" covered="_pAtCAsqBEeO-VrwwfpQBVw" event="_OcfHAMqCEeO-VrwwfpQBVw" message="_OcfHAcqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FWcIgMqCEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification1" covered="_pAtCAMqBEeO-VrwwfpQBVw" event="_FWd9sMqCEeO-VrwwfpQBVw" message="_FWfL0MqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FWdWoMqCEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification2" covered="_pAtCAcqBEeO-VrwwfpQBVw" event="_FWd9sMqCEeO-VrwwfpQBVw" message="_FWfL0MqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_JjMc0MqCEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification2" covered="_pAtCAcqBEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_cMR30MqCEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification3" covered="_pAtCAsqBEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_DAZeMMqCEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification1" covered="_pAtCAMqBEeO-VrwwfpQBVw" start="_FWcIgMqCEeO-VrwwfpQBVw" finish="_njeZkMqCEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_nihXUMqCEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification4" covered="_pAtpEMqBEeO-VrwwfpQBVw" start="_njfnsMqCEeO-VrwwfpQBVw" finish="_njfnsMqCEeO-VrwwfpQBVw"/>
+        <message xmi:id="_FWfL0MqCEeO-VrwwfpQBVw" name="new" messageSort="createMessage" receiveEvent="_FWdWoMqCEeO-VrwwfpQBVw" sendEvent="_FWcIgMqCEeO-VrwwfpQBVw"/>
+        <message xmi:id="_OcfHAcqCEeO-VrwwfpQBVw" name="new" messageSort="createMessage" receiveEvent="_Ocef8MqCEeO-VrwwfpQBVw" sendEvent="_OcdR0MqCEeO-VrwwfpQBVw"/>
+        <message xmi:id="_do-fUcqCEeO-VrwwfpQBVw" name="new" messageSort="createMessage" receiveEvent="_do94QMqCEeO-VrwwfpQBVw" sendEvent="_do8qIMqCEeO-VrwwfpQBVw"/>
+        <message xmi:id="_njgOwcqCEeO-VrwwfpQBVw" name="printMessage" receiveEvent="_njfnsMqCEeO-VrwwfpQBVw" sendEvent="_njeZkMqCEeO-VrwwfpQBVw">
+          <eAnnotations xmi:id="_uQY9gMqCEeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+            <details xmi:id="_uQY9gcqCEeO-VrwwfpQBVw" key="documentation" value="Kiírja: &quot;Parti idul.&quot;"/>
+          </eAnnotations>
+        </message>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_EuRHgMp9EeO-VrwwfpQBVw" name="EmberLép" classifierBehavior="_6mpIgMqCEeO-VrwwfpQBVw">
+      <eAnnotations xmi:id="_EuRHgcp9EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_EuRHgsp9EeO-VrwwfpQBVw" key="documentation" value="UC03&#xA;"/>
+      </eAnnotations>
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_6mpIgMqCEeO-VrwwfpQBVw" name="EmberLépDetail">
+        <ownedAttribute xmi:id="_C3UlQMqDEeO-VrwwfpQBVw" name="Property1" type="_bDEUYMp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_HNDPYMqDEeO-VrwwfpQBVw" name="Property2" type="_bDFiksp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_K1jAEMqDEeO-VrwwfpQBVw" name="Property3" type="_bDE7ucp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_PXsVkMqDEeO-VrwwfpQBVw" name="Property4" type="_bDE7psp_EeO-VrwwfpQBVw"/>
+        <ownedConnector xmi:id="_C3VzYMqDEeO-VrwwfpQBVw" name="Connector1">
+          <end xmi:id="_C3VzYcqDEeO-VrwwfpQBVw" role="_C3UlQMqDEeO-VrwwfpQBVw"/>
+          <end xmi:id="_HNDPYcqDEeO-VrwwfpQBVw" role="_HNDPYMqDEeO-VrwwfpQBVw"/>
+          <end xmi:id="_K1jnIMqDEeO-VrwwfpQBVw" role="_K1jAEMqDEeO-VrwwfpQBVw"/>
+          <end xmi:id="_PXs8oMqDEeO-VrwwfpQBVw" role="_PXsVkMqDEeO-VrwwfpQBVw"/>
+        </ownedConnector>
+        <lifeline xmi:id="_9OIvMMqCEeO-VrwwfpQBVw" name="" represents="_C3UlQMqDEeO-VrwwfpQBVw" coveredBy="_U7NBcMqDEeO-VrwwfpQBVw _6pUMkMqDEeO-VrwwfpQBVw _g5yTUMqDEeO-VrwwfpQBVw _Xnr10MqDEeO-VrwwfpQBVw _R9aaoMqDEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_9jlawMqCEeO-VrwwfpQBVw" name="robot" represents="_HNDPYMqDEeO-VrwwfpQBVw" coveredBy="_U7NogMqDEeO-VrwwfpQBVw _Xnsc4MqDEeO-VrwwfpQBVw _U6MU0MqDEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_-BkXQMqCEeO-VrwwfpQBVw" name="match" represents="_K1jAEMqDEeO-VrwwfpQBVw" coveredBy="_g5y6YMqDEeO-VrwwfpQBVw _6pVasMqDEeO-VrwwfpQBVw _yPeMwMqDEeO-VrwwfpQBVw _wC2kMMqDEeO-VrwwfpQBVw _g4t8UMqDEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_-WhTkMqCEeO-VrwwfpQBVw" name="board" represents="_PXsVkMqDEeO-VrwwfpQBVw" coveredBy="_wC3LQMqDEeO-VrwwfpQBVw _yPez0MqDEeO-VrwwfpQBVw _wBzbUMqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6pUMkMqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification11" covered="_9OIvMMqCEeO-VrwwfpQBVw" event="_6pVascqDEeO-VrwwfpQBVw" message="_6pWBwMqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6pVasMqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification12" covered="_-BkXQMqCEeO-VrwwfpQBVw" event="_6pVascqDEeO-VrwwfpQBVw" message="_6pWBwMqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yPeMwMqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification9" covered="_-BkXQMqCEeO-VrwwfpQBVw" event="_yPfa4MqDEeO-VrwwfpQBVw" message="_yPfa4cqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yPez0MqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification10" covered="_-WhTkMqCEeO-VrwwfpQBVw" event="_yPfa4MqDEeO-VrwwfpQBVw" message="_yPfa4cqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wC2kMMqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification7" covered="_-BkXQMqCEeO-VrwwfpQBVw" event="_wC3yUMqDEeO-VrwwfpQBVw" message="_wC3yUcqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wC3LQMqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification8" covered="_-WhTkMqCEeO-VrwwfpQBVw" event="_wC3yUMqDEeO-VrwwfpQBVw" message="_wC3yUcqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_g5yTUMqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification5" covered="_9OIvMMqCEeO-VrwwfpQBVw" event="_g5zhcMqDEeO-VrwwfpQBVw" message="_g5zhccqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_g5y6YMqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification6" covered="_-BkXQMqCEeO-VrwwfpQBVw" event="_g5zhcMqDEeO-VrwwfpQBVw" message="_g5zhccqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Xnr10MqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification3" covered="_9OIvMMqCEeO-VrwwfpQBVw" event="_XntD8MqDEeO-VrwwfpQBVw" message="_XntD8cqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Xnsc4MqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification4" covered="_9jlawMqCEeO-VrwwfpQBVw" event="_XntD8MqDEeO-VrwwfpQBVw" message="_XntD8cqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_U7NBcMqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification1" covered="_9OIvMMqCEeO-VrwwfpQBVw" event="_U7OPkMqDEeO-VrwwfpQBVw" message="_U7OPkcqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_U7NogMqDEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification2" covered="_9jlawMqCEeO-VrwwfpQBVw" event="_U7OPkMqDEeO-VrwwfpQBVw" message="_U7OPkcqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_R9aaoMqDEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification1" covered="_9OIvMMqCEeO-VrwwfpQBVw" start="_U7NBcMqDEeO-VrwwfpQBVw" finish="_6pUMkMqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_U6MU0MqDEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification2" covered="_9jlawMqCEeO-VrwwfpQBVw" start="_U7NogMqDEeO-VrwwfpQBVw" finish="_Xnsc4MqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_g4t8UMqDEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification3" covered="_-BkXQMqCEeO-VrwwfpQBVw" start="_g5y6YMqDEeO-VrwwfpQBVw" finish="_6pVasMqDEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_wBzbUMqDEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification4" covered="_-WhTkMqCEeO-VrwwfpQBVw" start="_wC3LQMqDEeO-VrwwfpQBVw" finish="_yPez0MqDEeO-VrwwfpQBVw"/>
+        <message xmi:id="_U7OPkcqDEeO-VrwwfpQBVw" name="printMessage" receiveEvent="_U7NogMqDEeO-VrwwfpQBVw" sendEvent="_U7NBcMqDEeO-VrwwfpQBVw">
+          <eAnnotations xmi:id="_djr6MMqDEeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+            <details xmi:id="_djshQMqDEeO-VrwwfpQBVw" key="documentation" value="Kiírja: &quot;Lépjen&quot;"/>
+          </eAnnotations>
+        </message>
+        <message xmi:id="_XntD8cqDEeO-VrwwfpQBVw" name="getUserStep" receiveEvent="_Xnsc4MqDEeO-VrwwfpQBVw" sendEvent="_Xnr10MqDEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:InstanceValue" xmi:id="_aeqqAMqDEeO-VrwwfpQBVw" name="return" type="_bDFioMp_EeO-VrwwfpQBVw"/>
+        </message>
+        <message xmi:id="_g5zhccqDEeO-VrwwfpQBVw" name="setUserStep" receiveEvent="_g5y6YMqDEeO-VrwwfpQBVw" sendEvent="_g5yTUMqDEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:LiteralBoolean" xmi:id="_m04YwMqDEeO-VrwwfpQBVw" name="return" value="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </argument>
+          <argument xmi:type="uml:InstanceValue" xmi:id="_m04_0MqDEeO-VrwwfpQBVw" name="userSteps" type="_bDFioMp_EeO-VrwwfpQBVw"/>
+        </message>
+        <message xmi:id="_wC3yUcqDEeO-VrwwfpQBVw" name="getSteps" receiveEvent="_wC3LQMqDEeO-VrwwfpQBVw" sendEvent="_wC2kMMqDEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:InstanceValue" xmi:id="_znhk0MqDEeO-VrwwfpQBVw" name="return" type="_bDFioMp_EeO-VrwwfpQBVw"/>
+        </message>
+        <message xmi:id="_yPfa4cqDEeO-VrwwfpQBVw" name="setStep" receiveEvent="_yPez0MqDEeO-VrwwfpQBVw" sendEvent="_yPeMwMqDEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:InstanceValue" xmi:id="_1RhogMqDEeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw"/>
+        </message>
+        <message xmi:id="_6pWBwMqDEeO-VrwwfpQBVw" name="isEndOfMatch" receiveEvent="_6pVasMqDEeO-VrwwfpQBVw" sendEvent="_6pUMkMqDEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:LiteralBoolean" xmi:id="_8GKlEMqDEeO-VrwwfpQBVw" name="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </argument>
+        </message>
+      </ownedBehavior>
+      <extensionPoint xmi:id="_EuRHg8p9EeO-VrwwfpQBVw" name="emberNextStep"/>
+      <extensionPoint xmi:id="_EuRHhMp9EeO-VrwwfpQBVw" name="vege"/>
+      <extensionPoint xmi:id="_EuRHhcp9EeO-VrwwfpQBVw" name="emberNyert"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_EuRHhsp9EeO-VrwwfpQBVw" name="PartiVége" classifierBehavior="_uzFTgMqFEeO-VrwwfpQBVw">
+      <eAnnotations xmi:id="_EuRHh8p9EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_EuRHiMp9EeO-VrwwfpQBVw" key="documentation" value="UC07&#xA;"/>
+      </eAnnotations>
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_uzFTgMqFEeO-VrwwfpQBVw" name="PartiVégeDetail">
+        <ownedAttribute xmi:id="_BIin4MqGEeO-VrwwfpQBVw" name="Property1" type="_Mjw8wMqAEeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_C3kVgMqGEeO-VrwwfpQBVw" name="Property2" type="_bDEUYMp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_GJHl0MqGEeO-VrwwfpQBVw" name="Property3" type="_bDFiksp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_Ov0V4MqGEeO-VrwwfpQBVw" name="Property4" type="_M7K3gMp9EeO-VrwwfpQBVw"/>
+        <ownedConnector xmi:id="_BIjO8MqGEeO-VrwwfpQBVw" name="Connector1">
+          <end xmi:id="_BIjO8cqGEeO-VrwwfpQBVw" role="_BIin4MqGEeO-VrwwfpQBVw"/>
+          <end xmi:id="_C3kVgcqGEeO-VrwwfpQBVw" role="_C3kVgMqGEeO-VrwwfpQBVw"/>
+          <end xmi:id="_GJHl0cqGEeO-VrwwfpQBVw" role="_GJHl0MqGEeO-VrwwfpQBVw"/>
+          <end xmi:id="_Ov088MqGEeO-VrwwfpQBVw" role="_Ov0V4MqGEeO-VrwwfpQBVw"/>
+        </ownedConnector>
+        <lifeline xmi:id="__dR_8MqFEeO-VrwwfpQBVw" name="" represents="_C3kVgMqGEeO-VrwwfpQBVw" coveredBy="_XWGPMMqGEeO-VrwwfpQBVw _WdaTsMqGEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_EKWMAMqGEeO-VrwwfpQBVw" name="robot" represents="_GJHl0MqGEeO-VrwwfpQBVw" coveredBy="_XWGPMcqGEeO-VrwwfpQBVw _hyJXUMqGEeO-VrwwfpQBVw _XVM3UMqGEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_Hs8JAMqGEeO-VrwwfpQBVw" name="ember" represents="_Ov0V4MqGEeO-VrwwfpQBVw" coveredBy="_hyIwQMqGEeO-VrwwfpQBVw _fIOHsMqGEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XWGPMMqGEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification1" covered="__dR_8MqFEeO-VrwwfpQBVw" event="_XWG2QMqGEeO-VrwwfpQBVw" message="_XWHdUMqGEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hyIwQMqGEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification3" covered="_Hs8JAMqGEeO-VrwwfpQBVw" event="_hyJXUcqGEeO-VrwwfpQBVw" message="_hyJ-YMqGEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hyJXUMqGEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification4" covered="_EKWMAMqGEeO-VrwwfpQBVw" event="_hyJXUcqGEeO-VrwwfpQBVw" message="_hyJ-YMqGEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XWGPMcqGEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification2" covered="_EKWMAMqGEeO-VrwwfpQBVw" event="_XWG2QMqGEeO-VrwwfpQBVw" message="_XWHdUMqGEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_WdaTsMqGEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification1" covered="__dR_8MqFEeO-VrwwfpQBVw" start="_XWGPMMqGEeO-VrwwfpQBVw" finish="_XWGPMMqGEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_XVM3UMqGEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification2" covered="_EKWMAMqGEeO-VrwwfpQBVw" start="_XWGPMcqGEeO-VrwwfpQBVw" finish="_hyJXUMqGEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fIOHsMqGEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification3" covered="_Hs8JAMqGEeO-VrwwfpQBVw" start="_hyIwQMqGEeO-VrwwfpQBVw" finish="_hyIwQMqGEeO-VrwwfpQBVw"/>
+        <message xmi:id="_XWHdUMqGEeO-VrwwfpQBVw" name="printMessage" receiveEvent="_XWGPMcqGEeO-VrwwfpQBVw" sendEvent="_XWGPMMqGEeO-VrwwfpQBVw">
+          <eAnnotations xmi:id="_yDiiMMqGEeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+            <details xmi:id="_yDiiMcqGEeO-VrwwfpQBVw" key="documentation" value="Az alábbiakat írja ki:&#xA;kiírja hogy ki nyert&#xA;&quot;Szedd le a golyókat és nyomd meg a folytatás gombot.&quot;"/>
+          </eAnnotations>
+        </message>
+        <message xmi:id="_hyJ-YMqGEeO-VrwwfpQBVw" name="folytatásGombMegnyomása" receiveEvent="_hyJXUMqGEeO-VrwwfpQBVw" sendEvent="_hyIwQMqGEeO-VrwwfpQBVw"/>
+      </ownedBehavior>
+      <extend xmi:id="_EuRHicp9EeO-VrwwfpQBVw" name="Extend1" extendedCase="_EuRHgMp9EeO-VrwwfpQBVw" extensionLocation="_EuRHhcp9EeO-VrwwfpQBVw"/>
+      <extend xmi:id="_EuRHisp9EeO-VrwwfpQBVw" name="Extend2" extendedCase="_EuRHkMp9EeO-VrwwfpQBVw" extensionLocation="_EuRHtsp9EeO-VrwwfpQBVw"/>
+      <extensionPoint xmi:id="_EuRHi8p9EeO-VrwwfpQBVw" name="emberNyert"/>
+      <extensionPoint xmi:id="_EuRHjMp9EeO-VrwwfpQBVw" name="robotNyert"/>
+      <extensionPoint xmi:id="_EuRHjcp9EeO-VrwwfpQBVw" name="ExtensionPoint1"/>
+      <extensionPoint xmi:id="_EuRHjsp9EeO-VrwwfpQBVw" name="jatekvege"/>
+      <extensionPoint xmi:id="_EuRHj8p9EeO-VrwwfpQBVw" name="jatekVege"/>
+      <extensionPoint xmi:id="_jtVHEMqFEeO-VrwwfpQBVw" name="jatekVege"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_EuRHkMp9EeO-VrwwfpQBVw" name="RobotLép" classifierBehavior="_Nv8fMMqEEeO-VrwwfpQBVw">
+      <eAnnotations xmi:id="_EuRHkcp9EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_EuRHksp9EeO-VrwwfpQBVw" key="documentation" value="UC04"/>
+      </eAnnotations>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_EuRHk8p9EeO-VrwwfpQBVw" name="RobotLépActivityDiagram">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_EuRHlMp9EeO-VrwwfpQBVw" name="TáblaBeolvasása"/>
+        <node xmi:type="uml:InitialNode" xmi:id="_EuRHlcp9EeO-VrwwfpQBVw" name="InitialNode1"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_EuRHlsp9EeO-VrwwfpQBVw" name="TáblaBeolvasás"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_EuRHl8p9EeO-VrwwfpQBVw" name="JátékVége"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_EuRHmMp9EeO-VrwwfpQBVw" name="JátékVégénekJelzése"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_EuRHmcp9EeO-VrwwfpQBVw" name="RobotKövetekezőLépése"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_EuRHmsp9EeO-VrwwfpQBVw" name="ActivityFinalNode1"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_EuRHm8p9EeO-VrwwfpQBVw" name="JátékVége"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_xa91YMp9EeO-VrwwfpQBVw" name="JátékVége?" outgoing="_Zx3AoMp-EeO-VrwwfpQBVw _jMgWIMp-EeO-VrwwfpQBVw" incoming="_ZFnlsMp-EeO-VrwwfpQBVw"/>
+        <node xmi:type="uml:InitialNode" xmi:id="_xa91Ycp9EeO-VrwwfpQBVw" name="InitialNode1" outgoing="_WeHX8Mp-EeO-VrwwfpQBVw"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_xa91Ysp9EeO-VrwwfpQBVw" name="JátékVége?" outgoing="_XpNSEMp-EeO-VrwwfpQBVw _YQ8AcMp-EeO-VrwwfpQBVw" incoming="_XE_KsMp-EeO-VrwwfpQBVw"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_xa91Y8p9EeO-VrwwfpQBVw" name="JátékVégénekJelzése" outgoing="_aQ1boMp-EeO-VrwwfpQBVw" incoming="_XpNSEMp-EeO-VrwwfpQBVw _Zx3AoMp-EeO-VrwwfpQBVw"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_xa91ZMp9EeO-VrwwfpQBVw" name="ActivityFinalNode1" incoming="_aQ1boMp-EeO-VrwwfpQBVw _jMgWIMp-EeO-VrwwfpQBVw"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_xa91Zcp9EeO-VrwwfpQBVw" name="RobotKövetekezőLépése" outgoing="_ZFnlsMp-EeO-VrwwfpQBVw" incoming="_YQ8AcMp-EeO-VrwwfpQBVw"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_xa91Zsp9EeO-VrwwfpQBVw" name="TáblaBeolvasás" outgoing="_XE_KsMp-EeO-VrwwfpQBVw" incoming="_WeHX8Mp-EeO-VrwwfpQBVw"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_WeHX8Mp-EeO-VrwwfpQBVw" name="ControlFlow1" source="_xa91Ycp9EeO-VrwwfpQBVw" target="_xa91Zsp9EeO-VrwwfpQBVw">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_WeHX8cp-EeO-VrwwfpQBVw" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_WeHX8sp-EeO-VrwwfpQBVw" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_XE_KsMp-EeO-VrwwfpQBVw" name="ControlFlow2" source="_xa91Zsp9EeO-VrwwfpQBVw" target="_xa91Ysp9EeO-VrwwfpQBVw">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_XE_Kscp-EeO-VrwwfpQBVw" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_XE_Kssp-EeO-VrwwfpQBVw" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_XpNSEMp-EeO-VrwwfpQBVw" name="ControlFlow3" source="_xa91Ysp9EeO-VrwwfpQBVw" target="_xa91Y8p9EeO-VrwwfpQBVw">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_XpNSEcp-EeO-VrwwfpQBVw" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_XpNSEsp-EeO-VrwwfpQBVw" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_YQ8AcMp-EeO-VrwwfpQBVw" name="ControlFlow4" source="_xa91Ysp9EeO-VrwwfpQBVw" target="_xa91Zcp9EeO-VrwwfpQBVw">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_YQ8Accp-EeO-VrwwfpQBVw"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_YQ8Acsp-EeO-VrwwfpQBVw" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_ZFnlsMp-EeO-VrwwfpQBVw" name="ControlFlow5" source="_xa91Zcp9EeO-VrwwfpQBVw" target="_xa91YMp9EeO-VrwwfpQBVw">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_ZFnlscp-EeO-VrwwfpQBVw" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_ZFnlssp-EeO-VrwwfpQBVw" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_Zx3AoMp-EeO-VrwwfpQBVw" name="ControlFlow6" source="_xa91YMp9EeO-VrwwfpQBVw" target="_xa91Y8p9EeO-VrwwfpQBVw">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_Zx3Aocp-EeO-VrwwfpQBVw" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_Zx3Aosp-EeO-VrwwfpQBVw" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_aQ1boMp-EeO-VrwwfpQBVw" name="ControlFlow7" source="_xa91Y8p9EeO-VrwwfpQBVw" target="_xa91ZMp9EeO-VrwwfpQBVw">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_aQ1bocp-EeO-VrwwfpQBVw" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_aQ1bosp-EeO-VrwwfpQBVw" value="1"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_jMgWIMp-EeO-VrwwfpQBVw" name="ControlFlow8" source="_xa91YMp9EeO-VrwwfpQBVw" target="_xa91ZMp9EeO-VrwwfpQBVw">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_jMgWIcp-EeO-VrwwfpQBVw"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_jMgWIsp-EeO-VrwwfpQBVw" value="1"/>
+        </edge>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_Nv8fMMqEEeO-VrwwfpQBVw" name="RobotLépDetail">
+        <ownedAttribute xmi:id="_Yqv_4MqEEeO-VrwwfpQBVw" name="Property1" type="_bDEUYMp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_fBgtoMqEEeO-VrwwfpQBVw" name="Property2" type="_bDE7nsp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_lKGcgMqEEeO-VrwwfpQBVw" name="Property3" type="_bDFiksp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_qrRmEMqEEeO-VrwwfpQBVw" name="Property4" type="_bDE7ucp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_v-0jUMqEEeO-VrwwfpQBVw" name="Property5" type="_bDE7psp_EeO-VrwwfpQBVw"/>
+        <ownedConnector xmi:id="_Yqwm8MqEEeO-VrwwfpQBVw" name="Connector1">
+          <end xmi:id="_Yqwm8cqEEeO-VrwwfpQBVw" role="_Yqv_4MqEEeO-VrwwfpQBVw"/>
+          <end xmi:id="_fBgtocqEEeO-VrwwfpQBVw" role="_fBgtoMqEEeO-VrwwfpQBVw"/>
+          <end xmi:id="_lKJf0MqEEeO-VrwwfpQBVw" role="_lKGcgMqEEeO-VrwwfpQBVw"/>
+          <end xmi:id="_qrRmEcqEEeO-VrwwfpQBVw" role="_qrRmEMqEEeO-VrwwfpQBVw"/>
+          <end xmi:id="_v-1KYMqEEeO-VrwwfpQBVw" role="_v-0jUMqEEeO-VrwwfpQBVw"/>
+        </ownedConnector>
+        <lifeline xmi:id="_VFskwMqEEeO-VrwwfpQBVw" name="" represents="_Yqv_4MqEEeO-VrwwfpQBVw" coveredBy="_21KJAMqEEeO-VrwwfpQBVw _LbyOwMqFEeO-VrwwfpQBVw _DpsLcMqFEeO-VrwwfpQBVw _AKcdYMqFEeO-VrwwfpQBVw _7Ybf4MqEEeO-VrwwfpQBVw _zzZoMMqEEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_VTiMcMqEEeO-VrwwfpQBVw" name="" represents="_fBgtoMqEEeO-VrwwfpQBVw" coveredBy="_7YcG8MqEEeO-VrwwfpQBVw _7XbaUMqEEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_VkINMMqEEeO-VrwwfpQBVw" name="robot" represents="_lKGcgMqEEeO-VrwwfpQBVw" coveredBy="_AKdEcMqFEeO-VrwwfpQBVw _AJXfUMqFEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_V3enAMqEEeO-VrwwfpQBVw" name="match" represents="_qrRmEMqEEeO-VrwwfpQBVw" coveredBy="_21KwEMqEEeO-VrwwfpQBVw _Lby10MqFEeO-VrwwfpQBVw _20D80MqEEeO-VrwwfpQBVw _LapmUMqFEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_ieKasMqEEeO-VrwwfpQBVw" name="board" represents="_v-0jUMqEEeO-VrwwfpQBVw" coveredBy="_DptZkMqFEeO-VrwwfpQBVw _DommUMqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LbyOwMqFEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification9" covered="_VFskwMqEEeO-VrwwfpQBVw" event="_Lbzc4MqFEeO-VrwwfpQBVw" message="_Lb0D8MqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Lby10MqFEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification10" covered="_V3enAMqEEeO-VrwwfpQBVw" event="_Lbzc4MqFEeO-VrwwfpQBVw" message="_Lb0D8MqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DpsLcMqFEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification7" covered="_VFskwMqEEeO-VrwwfpQBVw" event="_DptZkcqFEeO-VrwwfpQBVw" message="_DpuAoMqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DptZkMqFEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification8" covered="_ieKasMqEEeO-VrwwfpQBVw" event="_DptZkcqFEeO-VrwwfpQBVw" message="_DpuAoMqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_AKcdYMqFEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification5" covered="_VFskwMqEEeO-VrwwfpQBVw" event="_AKdrgMqFEeO-VrwwfpQBVw" message="_AKeSkMqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_AKdEcMqFEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification6" covered="_VkINMMqEEeO-VrwwfpQBVw" event="_AKdrgMqFEeO-VrwwfpQBVw" message="_AKeSkMqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7Ybf4MqEEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification3" covered="_VFskwMqEEeO-VrwwfpQBVw" event="_7YcG8cqEEeO-VrwwfpQBVw" message="_7YcuAMqEEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7YcG8MqEEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification4" covered="_VTiMcMqEEeO-VrwwfpQBVw" event="_7YcG8cqEEeO-VrwwfpQBVw" message="_7YcuAMqEEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_21KJAMqEEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification1" covered="_VFskwMqEEeO-VrwwfpQBVw" event="_21KwEcqEEeO-VrwwfpQBVw" message="_21LXIMqEEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_21KwEMqEEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification2" covered="_V3enAMqEEeO-VrwwfpQBVw" event="_21KwEcqEEeO-VrwwfpQBVw" message="_21LXIMqEEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_zzZoMMqEEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification1" covered="_VFskwMqEEeO-VrwwfpQBVw" start="_21KJAMqEEeO-VrwwfpQBVw" finish="_LbyOwMqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_20D80MqEEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification2" covered="_V3enAMqEEeO-VrwwfpQBVw" start="_21KwEMqEEeO-VrwwfpQBVw" finish="_21KwEMqEEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_7XbaUMqEEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification3" covered="_VTiMcMqEEeO-VrwwfpQBVw" start="_7YcG8MqEEeO-VrwwfpQBVw" finish="_7YcG8MqEEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_AJXfUMqFEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification4" covered="_VkINMMqEEeO-VrwwfpQBVw" start="_AKdEcMqFEeO-VrwwfpQBVw" finish="_AKdEcMqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_DommUMqFEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification5" covered="_ieKasMqEEeO-VrwwfpQBVw" start="_DptZkMqFEeO-VrwwfpQBVw" finish="_DptZkMqFEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_LapmUMqFEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification6" covered="_V3enAMqEEeO-VrwwfpQBVw" start="_Lby10MqFEeO-VrwwfpQBVw" finish="_Lby10MqFEeO-VrwwfpQBVw"/>
+        <message xmi:id="_21LXIMqEEeO-VrwwfpQBVw" name="getBoard" receiveEvent="_21KwEMqEEeO-VrwwfpQBVw" sendEvent="_21KJAMqEEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:InstanceValue" xmi:id="_4S9jwMqEEeO-VrwwfpQBVw" name="return" type="_bDE7psp_EeO-VrwwfpQBVw"/>
+        </message>
+        <message xmi:id="_7YcuAMqEEeO-VrwwfpQBVw" name="getRobotStep" receiveEvent="_7YcG8MqEEeO-VrwwfpQBVw" sendEvent="_7Ybf4MqEEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:InstanceValue" xmi:id="_8h0w4MqEEeO-VrwwfpQBVw" name="return" type="_bDE7jcp_EeO-VrwwfpQBVw"/>
+          <argument xmi:type="uml:InstanceValue" xmi:id="_8h0w4cqEEeO-VrwwfpQBVw" name="board" type="_bDE7psp_EeO-VrwwfpQBVw"/>
+        </message>
+        <message xmi:id="_AKeSkMqFEeO-VrwwfpQBVw" name="setStep" receiveEvent="_AKdEcMqFEeO-VrwwfpQBVw" sendEvent="_AKcdYMqFEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:InstanceValue" xmi:id="_BQk_AMqFEeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw"/>
+        </message>
+        <message xmi:id="_DpuAoMqFEeO-VrwwfpQBVw" name="setStep" receiveEvent="_DptZkMqFEeO-VrwwfpQBVw" sendEvent="_DpsLcMqFEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:InstanceValue" xmi:id="_EuiToMqFEeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw"/>
+        </message>
+        <message xmi:id="_Lb0D8MqFEeO-VrwwfpQBVw" name="isEndOfMatch" receiveEvent="_Lby10MqFEeO-VrwwfpQBVw" sendEvent="_LbyOwMqFEeO-VrwwfpQBVw">
+          <argument xmi:type="uml:LiteralBoolean" xmi:id="_Mp4ZkMqFEeO-VrwwfpQBVw" name="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </argument>
+        </message>
+      </ownedBehavior>
+      <extensionPoint xmi:id="_EuRHtMp9EeO-VrwwfpQBVw" name="robotNextStep"/>
+      <extensionPoint xmi:id="_EuRHtcp9EeO-VrwwfpQBVw" name="vege"/>
+      <extensionPoint xmi:id="_EuRHtsp9EeO-VrwwfpQBVw" name="robotNyert"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_M7K3gMp9EeO-VrwwfpQBVw" name="Ember"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_a0Z4MMp9EeO-VrwwfpQBVw" name="Robot"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_iChEsMp9EeO-VrwwfpQBVw" name="A_&lt;ember>_&lt;robotBekapcsolása>" memberEnd="_iChEscp9EeO-VrwwfpQBVw _iChEtMp9EeO-VrwwfpQBVw">
+      <ownedEnd xmi:id="_iChEscp9EeO-VrwwfpQBVw" name="ember" type="_M7K3gMp9EeO-VrwwfpQBVw" association="_iChEsMp9EeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iChEssp9EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iChEs8p9EeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_iChEtMp9EeO-VrwwfpQBVw" name="robotBekapcsolása" type="_CFKXQMp9EeO-VrwwfpQBVw" association="_iChEsMp9EeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iChEtcp9EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iChEtsp9EeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jJWw8Mp9EeO-VrwwfpQBVw" name="A_&lt;ember>_&lt;játékIndítása>" memberEnd="_jJWw8cp9EeO-VrwwfpQBVw _jJWw9Mp9EeO-VrwwfpQBVw">
+      <ownedEnd xmi:id="_jJWw8cp9EeO-VrwwfpQBVw" name="ember" type="_M7K3gMp9EeO-VrwwfpQBVw" association="_jJWw8Mp9EeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jJWw8sp9EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jJWw88p9EeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_jJWw9Mp9EeO-VrwwfpQBVw" name="játékIndítása" type="_EuQgcMp9EeO-VrwwfpQBVw" association="_jJWw8Mp9EeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jJWw9cp9EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jJWw9sp9EeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jhj1kMp9EeO-VrwwfpQBVw" name="A_&lt;ember>_&lt;emberLép>" memberEnd="_jhj1kcp9EeO-VrwwfpQBVw _jhj1lMp9EeO-VrwwfpQBVw">
+      <ownedEnd xmi:id="_jhj1kcp9EeO-VrwwfpQBVw" name="ember" type="_M7K3gMp9EeO-VrwwfpQBVw" association="_jhj1kMp9EeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jhj1ksp9EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jhj1k8p9EeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_jhj1lMp9EeO-VrwwfpQBVw" name="emberLép" type="_EuRHgMp9EeO-VrwwfpQBVw" association="_jhj1kMp9EeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jhj1lcp9EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jhj1lsp9EeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ktVsMMp9EeO-VrwwfpQBVw" name="A_&lt;robot>_&lt;robotLép>" memberEnd="_ktVsMcp9EeO-VrwwfpQBVw _ktVsNMp9EeO-VrwwfpQBVw">
+      <ownedEnd xmi:id="_ktVsMcp9EeO-VrwwfpQBVw" name="robot" type="_a0Z4MMp9EeO-VrwwfpQBVw" association="_ktVsMMp9EeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ktVsMsp9EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ktVsM8p9EeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ktVsNMp9EeO-VrwwfpQBVw" name="robotLép" type="_EuRHkMp9EeO-VrwwfpQBVw" association="_ktVsMMp9EeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ktVsNcp9EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ktVsNsp9EeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_SUV-0MqBEeO-VrwwfpQBVw" name="CallEvent1" operation="_bDFil8p_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_WDNdQMqBEeO-VrwwfpQBVw" name="CallEvent2" operation="_bDFil8p_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CreationEvent" xmi:id="_FWd9sMqCEeO-VrwwfpQBVw" name="CreationEvent1"/>
+    <packagedElement xmi:type="uml:CreationEvent" xmi:id="_OcfHAMqCEeO-VrwwfpQBVw" name="CreationEvent2"/>
+    <packagedElement xmi:type="uml:CreationEvent" xmi:id="_do-fUMqCEeO-VrwwfpQBVw" name="CreationEvent3"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_njgOwMqCEeO-VrwwfpQBVw" name="CallEvent3" operation="_bDFimMp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_U7OPkMqDEeO-VrwwfpQBVw" name="CallEvent4" operation="_bDFimMp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_XntD8MqDEeO-VrwwfpQBVw" name="CallEvent5" operation="_bDFimcp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_g5zhcMqDEeO-VrwwfpQBVw" name="CallEvent6" operation="_bDFiisp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_wC3yUMqDEeO-VrwwfpQBVw" name="CallEvent7" operation="_bDE7sMp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_yPfa4MqDEeO-VrwwfpQBVw" name="CallEvent8" operation="_bDE7rMp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_6pVascqDEeO-VrwwfpQBVw" name="CallEvent9" operation="_bDFigsp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_21KwEcqEEeO-VrwwfpQBVw" name="CallEvent10" operation="_bDFihsp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_7YcG8cqEEeO-VrwwfpQBVw" name="CallEvent11" operation="_bDE7ocp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_AKdrgMqFEeO-VrwwfpQBVw" name="CallEvent12" operation="_bDFim8p_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_DptZkcqFEeO-VrwwfpQBVw" name="CallEvent13" operation="_bDE7rMp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_Lbzc4MqFEeO-VrwwfpQBVw" name="CallEvent14" operation="_bDFigsp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_akvx8MqFEeO-VrwwfpQBVw" name="JátékVége" classifierBehavior="_JDsEEMqHEeO-VrwwfpQBVw">
+      <eAnnotations xmi:id="_tinxMMqFEeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_tio_UMqFEeO-VrwwfpQBVw" key="documentation" value="UC05"/>
+      </eAnnotations>
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_JDsEEMqHEeO-VrwwfpQBVw" name="JátékVégeDetail">
+        <ownedAttribute xmi:id="_SBMxoMqHEeO-VrwwfpQBVw" name="Property1" type="_bDEUYMp_EeO-VrwwfpQBVw"/>
+        <ownedAttribute xmi:id="_Vf5tIMqHEeO-VrwwfpQBVw" name="Property2" type="_bDFiksp_EeO-VrwwfpQBVw"/>
+        <ownedConnector xmi:id="_SBNYsMqHEeO-VrwwfpQBVw" name="Connector1">
+          <end xmi:id="_SBNYscqHEeO-VrwwfpQBVw" role="_SBMxoMqHEeO-VrwwfpQBVw"/>
+          <end xmi:id="_Vf6UMMqHEeO-VrwwfpQBVw" role="_Vf5tIMqHEeO-VrwwfpQBVw"/>
+        </ownedConnector>
+        <lifeline xmi:id="_PsSvwMqHEeO-VrwwfpQBVw" name="" represents="_SBMxoMqHEeO-VrwwfpQBVw" coveredBy="_YeQ7sMqHEeO-VrwwfpQBVw _W1rNQMqHEeO-VrwwfpQBVw"/>
+        <lifeline xmi:id="_TSbwAMqHEeO-VrwwfpQBVw" name="robot" represents="_Vf5tIMqHEeO-VrwwfpQBVw" coveredBy="_YeRiwMqHEeO-VrwwfpQBVw _YdXj0MqHEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YeQ7sMqHEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification1" covered="_PsSvwMqHEeO-VrwwfpQBVw" event="_YeRiwcqHEeO-VrwwfpQBVw" message="_YeSw4MqHEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YeRiwMqHEeO-VrwwfpQBVw" name="MessageOccurrenceSpecification2" covered="_TSbwAMqHEeO-VrwwfpQBVw" event="_YeRiwcqHEeO-VrwwfpQBVw" message="_YeSw4MqHEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_W1rNQMqHEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification1" covered="_PsSvwMqHEeO-VrwwfpQBVw" start="_YeQ7sMqHEeO-VrwwfpQBVw" finish="_YeQ7sMqHEeO-VrwwfpQBVw"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_YdXj0MqHEeO-VrwwfpQBVw" name="BehaviorExecutionSpecification2" covered="_TSbwAMqHEeO-VrwwfpQBVw" start="_YeRiwMqHEeO-VrwwfpQBVw" finish="_YeRiwMqHEeO-VrwwfpQBVw"/>
+        <message xmi:id="_YeSw4MqHEeO-VrwwfpQBVw" name="printMessage" receiveEvent="_YeRiwMqHEeO-VrwwfpQBVw" sendEvent="_YeQ7sMqHEeO-VrwwfpQBVw">
+          <eAnnotations xmi:id="_dYwfwMqHEeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+            <details xmi:id="_dYwfwcqHEeO-VrwwfpQBVw" key="documentation" value="Kiírja a játék végeredményét."/>
+          </eAnnotations>
+        </message>
+      </ownedBehavior>
+      <extend xmi:id="_jvecIMqFEeO-VrwwfpQBVw" name="Extend1" extendedCase="_EuRHhsp9EeO-VrwwfpQBVw" extensionLocation="_jtVHEMqFEeO-VrwwfpQBVw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_XWG2QMqGEeO-VrwwfpQBVw" name="CallEvent15" operation="_bDFimMp_EeO-VrwwfpQBVw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_hyJXUcqGEeO-VrwwfpQBVw" name="CallEvent16"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_YeRiwcqHEeO-VrwwfpQBVw" name="CallEvent17" operation="_bDFimMp_EeO-VrwwfpQBVw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_wSRJAHFzEduxYLkhQoh7Ag" name="LogicalView">
+    <packagedElement xmi:type="uml:Class" xmi:id="_bDEUYMp_EeO-VrwwfpQBVw" name="UserInterface">
+      <eAnnotations xmi:id="_bDEUYcp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_bDEUYsp_EeO-VrwwfpQBVw" key="documentation" value="Ez az osztály valósítja meg a felhasználói eseteket."/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_bDEUY8p_EeO-VrwwfpQBVw" name="numberOfMatches" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_bDEUZMp_EeO-VrwwfpQBVw" name="robotWins" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_bDE7cMp_EeO-VrwwfpQBVw" name="match" type="_bDE7ucp_EeO-VrwwfpQBVw" aggregation="composite">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bDE7ccp_EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bDE7csp_EeO-VrwwfpQBVw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_bDE7c8p_EeO-VrwwfpQBVw" name="nextPlayer" visibility="private" type="_bDFij8p_EeO-VrwwfpQBVw"/>
+      <ownedAttribute xmi:id="_MjEZMMqAEeO-VrwwfpQBVw" name="match" type="_bDE7ucp_EeO-VrwwfpQBVw" aggregation="composite" association="_Mjw8wMqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MjEZMcqAEeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MjEZMsqAEeO-VrwwfpQBVw" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_bDE7dMp_EeO-VrwwfpQBVw" name=""/>
+      <ownedOperation xmi:id="_bDE7dcp_EeO-VrwwfpQBVw" name="startGame" visibility="private">
+        <eAnnotations xmi:id="_bDE7dsp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7d8p_EeO-VrwwfpQBVw" key="documentation" value="UC02&#xA;&#xA;robot.printMenu(...) - Partik száma?&#xA;numberOfMatches értékének beállítása.&#xA;&#xA;robot.printMenu(...) - Ki kezdje a játékot?&#xA;nextPlayer értékének beállítása.&#xA;&#xA;"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDE7eMp_EeO-VrwwfpQBVw" name="startMatch" visibility="private">
+        <eAnnotations xmi:id="_bDE7ecp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7esp_EeO-VrwwfpQBVw" key="documentation" value="UC06&#xA;&#xA;match = new Match()&#xA;robot.printMessage(&quot;Parti indul&quot;)"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDE7e8p_EeO-VrwwfpQBVw" name="userStep" visibility="private">
+        <eAnnotations xmi:id="_bDE7fMp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7fcp_EeO-VrwwfpQBVw" key="documentation" value="UC03&#xA;&#xA;robot.printMessage(&quot;Lépjen!&quot;)&#xA;&#xA;// beolvassuk a táblát&#xA;readedSteps = robot.getUserStep()&#xA;&#xA;if (match.setUserStep(readedSteps)) &#xA;&#x9;nextPlayer = ROBOT&#xA;}&#xA;"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDE7fsp_EeO-VrwwfpQBVw" name="robotStep" visibility="private">
+        <eAnnotations xmi:id="_bDE7f8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7gMp_EeO-VrwwfpQBVw" key="documentation" value="UC04&#xA;&#xA;step = GameIntelligence.getRobotStep(board)&#xA;&#xA;robot.setStep(step)&#xA;board.setStep(step)&#xA;nextPlayer = HUMAN&#xA;&#xA;"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDE7gcp_EeO-VrwwfpQBVw" name="endOfMatch" visibility="private">
+        <eAnnotations xmi:id="_bDE7gsp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7g8p_EeO-VrwwfpQBVw" key="documentation" value="UC07&#xA;&#xA;// kiírja hogy ki nyert&#xA;// szedd le a golyókat és nyomd meg a kezdés gombot."/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDE7hMp_EeO-VrwwfpQBVw" name="endOfGame" visibility="private">
+        <eAnnotations xmi:id="_bDE7hcp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7hsp_EeO-VrwwfpQBVw" key="documentation" value="UC05&#xA;&#xA;// kiírja az eredményt"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDE7h8p_EeO-VrwwfpQBVw" name="main" isStatic="true">
+        <eAnnotations xmi:id="_bDE7iMp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7icp_EeO-VrwwfpQBVw" key="documentation" value="startProgram()&#xA;while (nemExit) {&#xA;&#x9;startGame()&#xA;&#x9;&#xA;&#x9;for (int i=0;i&lt;numberOfMatches;i++) {&#xA;&#x9;&#x9;startMatch()&#xA;&#x9;&#x9;while ( ! match.isEndOfMatch() ) {&#xA;&#x9;&#x9;&#x9;if (nextPlayer = HUMAN) {&#xA;&#x9;&#x9;&#x9;&#x9;userStep()&#xA;&#x9;&#x9;&#x9;} else {&#xA;&#x9;&#x9;&#x9;&#x9;robotStep()&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;endOfMatch()&#xA;&#x9;}&#xA;&#x9;endOfGame()&#xA;&#x9;startProgram()&#xA;}"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDE7isp_EeO-VrwwfpQBVw" name="startProgram" visibility="private">
+        <eAnnotations xmi:id="_bDE7i8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7jMp_EeO-VrwwfpQBVw" key="documentation" value="Ez írja ki a főmenüt, és kéri be a választ."/>
+        </eAnnotations>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bDE7jcp_EeO-VrwwfpQBVw" name="Step">
+      <eAnnotations xmi:id="_bDE7jsp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_bDE7j8p_EeO-VrwwfpQBVw" key="documentation" value="Egy lépés absztrakt reprezentációja."/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_bDE7kMp_EeO-VrwwfpQBVw" name="row" visibility="private">
+        <eAnnotations xmi:id="_bDE7kcp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7ksp_EeO-VrwwfpQBVw" key="documentation" value="Sor"/>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_bDE7k8p_EeO-VrwwfpQBVw" name="column" visibility="private">
+        <eAnnotations xmi:id="_bDE7lMp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7lcp_EeO-VrwwfpQBVw" key="documentation" value="Oszlop"/>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_bDE7lsp_EeO-VrwwfpQBVw" name="player" visibility="private" type="_bDFij8p_EeO-VrwwfpQBVw">
+        <eAnnotations xmi:id="_bDE7l8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7mMp_EeO-VrwwfpQBVw" key="documentation" value="Játékos"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_bDE7mcp_EeO-VrwwfpQBVw" name="comparePosition">
+        <eAnnotations xmi:id="_bDE7msp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7m8p_EeO-VrwwfpQBVw" key="documentation" value="Ez a függvény egy rendezési relációt definiál a Step objektumok között. A rendezéshez a row és column értékeket használja.&#xA;Ha a this &lt; step, akkor -1,&#xA;ha a this = step, akkor 0,&#xA;ha a this > step, akkor 1 a visszatérési érték."/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bDE7nMp_EeO-VrwwfpQBVw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_bDE7ncp_EeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bDE7nsp_EeO-VrwwfpQBVw" name="GameIntelligence">
+      <eAnnotations xmi:id="_bDE7n8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_bDE7oMp_EeO-VrwwfpQBVw" key="documentation" value="Ez az osztály felel a robot lépésének a meghatározásáért.&#xA;&#xA;Ez egy static osztály egy publikus metódussal."/>
+      </eAnnotations>
+      <ownedOperation xmi:id="_bDE7ocp_EeO-VrwwfpQBVw" name="getRobotStep" isStatic="true">
+        <eAnnotations xmi:id="_bDE7osp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7o8p_EeO-VrwwfpQBVw" key="documentation" value="Meghatározza a robot lépését."/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bDE7pMp_EeO-VrwwfpQBVw" name="return" type="_bDE7jcp_EeO-VrwwfpQBVw" direction="return"/>
+        <ownedParameter xmi:id="_bDE7pcp_EeO-VrwwfpQBVw" name="board" type="_bDE7psp_EeO-VrwwfpQBVw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bDE7psp_EeO-VrwwfpQBVw" name="Board">
+      <eAnnotations xmi:id="_bDE7p8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_bDE7qMp_EeO-VrwwfpQBVw" key="documentation" value="A játéktér absztrakt reprezentációja."/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_bDE7qcp_EeO-VrwwfpQBVw" name="listOfStep" type="_bDFioMp_EeO-VrwwfpQBVw" aggregation="composite">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bDE7qsp_EeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bDE7q8p_EeO-VrwwfpQBVw" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_bDE7rMp_EeO-VrwwfpQBVw" name="setStep">
+        <eAnnotations xmi:id="_bDE7rcp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7rsp_EeO-VrwwfpQBVw" key="documentation" value="Egy játékos lépés beállítása."/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bDE7r8p_EeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDE7sMp_EeO-VrwwfpQBVw" name="getSteps">
+        <eAnnotations xmi:id="_bDE7scp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDE7ssp_EeO-VrwwfpQBVw" key="documentation" value="Az összes lépést egy rendezett listában adja vissza."/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bDE7s8p_EeO-VrwwfpQBVw" name="return" type="_bDFioMp_EeO-VrwwfpQBVw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bDE7ucp_EeO-VrwwfpQBVw" name="Match">
+      <eAnnotations xmi:id="_bDFigMp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_bDFigcp_EeO-VrwwfpQBVw" key="documentation" value="Ez reprezentálja a parti logikai egységet."/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_TeyOIMqAEeO-VrwwfpQBVw" name="listOfStep" type="_bDFioMp_EeO-VrwwfpQBVw" aggregation="composite" association="_TficEMqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TeyOIcqAEeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TeyOIsqAEeO-VrwwfpQBVw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_bbcisMqAEeO-VrwwfpQBVw" name="board" type="_bDE7psp_EeO-VrwwfpQBVw" aggregation="composite" association="_bcJGQMqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bbciscqAEeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bbcissqAEeO-VrwwfpQBVw" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_bDFigsp_EeO-VrwwfpQBVw" name="isEndOfMatch">
+        <eAnnotations xmi:id="_bDFig8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDFihMp_EeO-VrwwfpQBVw" key="documentation" value="Ezzel a metódussal lehet ellenőrizni, hogy vége van e a partinak."/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bDFihcp_EeO-VrwwfpQBVw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDFihsp_EeO-VrwwfpQBVw" name="getBoard">
+        <eAnnotations xmi:id="_bDFih8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDFiiMp_EeO-VrwwfpQBVw" key="documentation" value="Ezzel a metódussal lehet elkérni a játékteret reprezentáló objektumot."/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bDFiicp_EeO-VrwwfpQBVw" name="return" type="_bDE7psp_EeO-VrwwfpQBVw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDFiisp_EeO-VrwwfpQBVw" name="setUserStep">
+        <eAnnotations xmi:id="_bDFii8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDFijMp_EeO-VrwwfpQBVw" key="documentation" value="Az emberi játékos lépésének a meghatározását végzi el. Érvényes lépés esetén azt le is menti a Board-ba.&#xA;==================== &#xA;&#xA;// elkérjük az eddigi lépéseket&#xA;oldSteps = board.getSteps()&#xA;&#xA;// elemenkénti feldolgozással egyszerre&#xA;// feldolgozzuk a userSteps és oldSteps listákat.&#xA;&#xA;// Csalás esetén exception-t dobunk"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bDFijcp_EeO-VrwwfpQBVw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_bDFijsp_EeO-VrwwfpQBVw" name="userSteps" type="_bDFioMp_EeO-VrwwfpQBVw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_bDFij8p_EeO-VrwwfpQBVw" name="PlayerEnum">
+      <ownedLiteral xmi:id="_bDFikMp_EeO-VrwwfpQBVw" name="HUMAN"/>
+      <ownedLiteral xmi:id="_bDFikcp_EeO-VrwwfpQBVw" name="ROBOT"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bDFiksp_EeO-VrwwfpQBVw" name="Robot">
+      <eAnnotations xmi:id="_bDFik8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_bDFilMp_EeO-VrwwfpQBVw" key="documentation" value="Ez az osztály felelős a robot fizikai irányításáért.&#xA;&#xA;Ez Singleton kell legyen."/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_bDFilcp_EeO-VrwwfpQBVw" name="robot" visibility="private" type="_bDFiksp_EeO-VrwwfpQBVw"/>
+      <ownedOperation xmi:id="_bDFilsp_EeO-VrwwfpQBVw" name="boardInitialPosition"/>
+      <ownedOperation xmi:id="_bDFil8p_EeO-VrwwfpQBVw" name="printMenu"/>
+      <ownedOperation xmi:id="_bDFimMp_EeO-VrwwfpQBVw" name="printMessage"/>
+      <ownedOperation xmi:id="_bDFimcp_EeO-VrwwfpQBVw" name="getUserStep">
+        <ownedParameter xmi:id="_bDFimsp_EeO-VrwwfpQBVw" name="return" type="_bDFioMp_EeO-VrwwfpQBVw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDFim8p_EeO-VrwwfpQBVw" name="setStep">
+        <ownedParameter xmi:id="_bDFinMp_EeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDFincp_EeO-VrwwfpQBVw" name="Robot" visibility="private"/>
+      <ownedOperation xmi:id="_bDFinsp_EeO-VrwwfpQBVw" name="getRobot" isStatic="true">
+        <ownedParameter xmi:id="_bDFin8p_EeO-VrwwfpQBVw" name="return" type="_bDFiksp_EeO-VrwwfpQBVw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bDFioMp_EeO-VrwwfpQBVw" name="ListOfStep">
+      <eAnnotations xmi:id="_bDFiocp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+        <details xmi:id="_bDFiosp_EeO-VrwwfpQBVw" key="documentation" value="A lépések egy rendezett listáját valósítja me. A listát a getStep és nextStep eljárással csak egy konkrét rendezés szerint lehet bejárni."/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_bDFio8p_EeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw" aggregation="composite">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bDFipMp_EeO-VrwwfpQBVw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bDFipcp_EeO-VrwwfpQBVw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_UfaksMqAEeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw" aggregation="composite" association="_UgN18MqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UfakscqAEeO-VrwwfpQBVw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UfakssqAEeO-VrwwfpQBVw"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_bDFipsp_EeO-VrwwfpQBVw" name="goToBegin">
+        <eAnnotations xmi:id="_bDFip8p_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDFiqMp_EeO-VrwwfpQBVw" key="documentation" value="A lista eljére ugrik."/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDFiqcp_EeO-VrwwfpQBVw" name="getStep">
+        <eAnnotations xmi:id="_bDFiqsp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDFiq8p_EeO-VrwwfpQBVw" key="documentation" value="Visszaadja azt a játékost, akinek a bábuja az adott pozícón van. Ha nincs ott bábu, akkor null a visszatérési érték."/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bDFirMp_EeO-VrwwfpQBVw" name="return" type="_bDFij8p_EeO-VrwwfpQBVw" direction="return"/>
+        <ownedParameter xmi:id="_bDFircp_EeO-VrwwfpQBVw" name="row">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_bDFirsp_EeO-VrwwfpQBVw" name="column">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDFir8p_EeO-VrwwfpQBVw" name="nextStep">
+        <eAnnotations xmi:id="_bDFisMp_EeO-VrwwfpQBVw" source="http://www.topcased.org/documentation">
+          <details xmi:id="_bDFiscp_EeO-VrwwfpQBVw" key="documentation" value="A lista bejárására szolgáló eljárás, amely visszaad egy Step objektumot, vagy null-t, ha a lista végetért."/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_bDFissp_EeO-VrwwfpQBVw" name="return" type="_bDE7jcp_EeO-VrwwfpQBVw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDFis8p_EeO-VrwwfpQBVw" name="addStep">
+        <ownedParameter xmi:id="_bDFitMp_EeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_CHYdcMqAEeO-VrwwfpQBVw" name="A_&lt;userInterface>_&lt;robot>" memberEnd="_CHYdccqAEeO-VrwwfpQBVw _CHYddMqAEeO-VrwwfpQBVw" navigableOwnedEnd="_CHYddMqAEeO-VrwwfpQBVw">
+      <ownedEnd xmi:id="_CHYdccqAEeO-VrwwfpQBVw" name="userInterface" type="_bDEUYMp_EeO-VrwwfpQBVw" association="_CHYdcMqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CHYdcsqAEeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CHYdc8qAEeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_CHYddMqAEeO-VrwwfpQBVw" name="robot" type="_bDFiksp_EeO-VrwwfpQBVw" association="_CHYdcMqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CHYddcqAEeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CHYddsqAEeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Mjw8wMqAEeO-VrwwfpQBVw" name="A_&lt;userInterface>_&lt;match>" memberEnd="_Mjw8wcqAEeO-VrwwfpQBVw _MjEZMMqAEeO-VrwwfpQBVw">
+      <ownedEnd xmi:id="_Mjw8wcqAEeO-VrwwfpQBVw" name="userInterface" type="_bDEUYMp_EeO-VrwwfpQBVw" association="_Mjw8wMqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Mjw8wsqAEeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Mjw8w8qAEeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TficEMqAEeO-VrwwfpQBVw" name="A_&lt;match>_&lt;listOfStep>" memberEnd="_TficEcqAEeO-VrwwfpQBVw _TeyOIMqAEeO-VrwwfpQBVw">
+      <ownedEnd xmi:id="_TficEcqAEeO-VrwwfpQBVw" name="match" type="_bDE7ucp_EeO-VrwwfpQBVw" association="_TficEMqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TficEsqAEeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TficE8qAEeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_UgN18MqAEeO-VrwwfpQBVw" name="A_&lt;listOfStep>_&lt;step>" memberEnd="_UgN18cqAEeO-VrwwfpQBVw _UfaksMqAEeO-VrwwfpQBVw">
+      <ownedEnd xmi:id="_UgN18cqAEeO-VrwwfpQBVw" name="listOfStep" type="_bDFioMp_EeO-VrwwfpQBVw" association="_UgN18MqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UgN18sqAEeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UgN188qAEeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_bcJGQMqAEeO-VrwwfpQBVw" name="A_&lt;match>_&lt;board>" memberEnd="_bcJGQcqAEeO-VrwwfpQBVw _bbcisMqAEeO-VrwwfpQBVw">
+      <ownedEnd xmi:id="_bcJGQcqAEeO-VrwwfpQBVw" name="match" type="_bDE7ucp_EeO-VrwwfpQBVw" association="_bcJGQMqAEeO-VrwwfpQBVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bcJGQsqAEeO-VrwwfpQBVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bcJGQ8qAEeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ypXjQHFzEduxYLkhQoh7Ag" name="ComponentView">
+    <packagedElement xmi:type="uml:Component" xmi:id="_zwUu0HF0EduxYLkhQoh7Ag" name="Main"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_1coVEHFzEduxYLkhQoh7Ag" name="DeploymentView"/>
+</uml:Model>
