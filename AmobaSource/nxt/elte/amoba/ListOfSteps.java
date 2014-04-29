@@ -1,8 +1,12 @@
 package nxt.elte.amoba;
 
 public class ListOfSteps {
+	Step[] steps = new Step[9];
 	
-	public void goToBegin() {}
+	public void goToBegin() {
+		//TODO itt úgy kellene beállni a lista elejére,
+		//hogy a getNextStep elsõ híváskor az elsõ elemet adja vissza!!!!
+	}
 	
 	public PlayerEnum getStep(int row, int column) {
 		PlayerEnum player = null;

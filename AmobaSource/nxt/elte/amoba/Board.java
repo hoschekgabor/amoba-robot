@@ -9,4 +9,8 @@ public class Board {
 		return listOfSteps;
 	}
 
+	public void setListOfSteps(ListOfSteps listOfSteps) {
+		this.listOfSteps = listOfSteps;
+	}
+
 }
