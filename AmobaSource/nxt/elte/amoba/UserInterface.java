@@ -5,6 +5,7 @@ import lejos.util.Delay;
 public class UserInterface {
 	static int numberOfMatches;
 	static int robotWins;
+	static int humanWins;
 	static Match match;
 	static PlayerEnum nextPlayer;
 	
@@ -58,13 +59,33 @@ public class UserInterface {
 	public static void userStep() {
 		do {
 			Robot.printMessage("Kérem lépjen");
-			//TODO várni kell, hogy lépett-e... Robot metódus
+			//TODO varni kell, hogy lepett-e... Robot metodus
 		} while (!match.setUserStep(Robot.getUserSteps()));
+		nextPlayer = PlayerEnum.ROBOT;
 	}
 	
-	public static void robotStep() {}
+	public static void robotStep() {
+		Board board = new Board();
+		Step step = new GameIntelligence().getRobotStep(board);
+		Robot.setStep(step);
+		board.setStep(step);
+		nextPlayer = PlayerEnum.HUMAN;
+	}
 	
-	public static void endOfMatch() {}
+	public static void endOfMatch() {
+		Robot.printMessage("Parti vége!");
+		//TODO eldonteni, hogy ki nyert - Match metodus
+		// case ág, HUMAN, ROBOT, vagy null(dontetlen)
+	}
 	
-	public static void endOfGame() {}
+	public static void endOfGame() {
+		if (humanWins > robotWins) {
+			Robot.printMessage("Gartuláluk, Öm nyert!");
+		} else if (humanWins < robotWins) {
+			Robot.printMessage("Haha, én nyertem!!");
+		} else {
+			Robot.printMessage("Döntetlen!");
+		}
+		Delay.msDelay(5000);
+	}
 }

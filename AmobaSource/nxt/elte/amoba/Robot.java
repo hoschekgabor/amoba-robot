@@ -25,6 +25,6 @@ public class Robot {
 		return listOfSteps;
 	}
 	
-	protected static void setStep() {}
+	protected static void setStep(Step step) {}
 
 }
