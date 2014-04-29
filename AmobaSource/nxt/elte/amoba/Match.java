@@ -29,7 +29,7 @@ public class Match {
 			(listOfSteps.getStep(2, 2).equals(listOfSteps.getStep(3, 1)))) {
 			return listOfSteps.getStep(1, 3);
 		}
-		// Döntettlen ellenõrzése
+		// Döntetlen ellenõrzése
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
 				if (listOfSteps.getStep(i, j) == null) {

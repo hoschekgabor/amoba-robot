@@ -68,7 +68,7 @@ public class UserInterface {
 	
 	public static void robotStep() {
 		Board board = new Board();
-		Step step = new GameIntelligence().getRobotStep(board);
+		Step step = GameIntelligence.getRobotStep(board);
 		Robot.setStep(step);
 		board.setStep(step);
 		nextPlayer = PlayerEnum.HUMAN;
