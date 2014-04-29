@@ -17,6 +17,7 @@ public class TestSensors {
 	final static int motorPort = 2;
 	final static int touchSensorPort = 0;
 	final static int usoundSensorPort = 3;
+	// new Test
 
 	public static void main(String[] args) {
 		boolean exit = false;
