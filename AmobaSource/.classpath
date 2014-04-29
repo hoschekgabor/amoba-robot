@@ -3,5 +3,6 @@
 	<classpathentry exported="true" kind="con" path="org.lejos.nxt.ldt.LEJOS_LIBRARY_CONTAINER/nxt"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry excluding="src/" kind="src" path=""/>
+	<classpathentry kind="lib" path="classes.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
