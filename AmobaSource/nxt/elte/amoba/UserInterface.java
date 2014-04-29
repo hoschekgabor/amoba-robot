@@ -1,13 +1,34 @@
 package nxt.elte.amoba;
 
 import lejos.util.Delay;
-import lejos.util.TextMenu;
 
 public class UserInterface {
 	static int numberOfMatches;
 	static int robotWins;
 	static Match match;
 	static PlayerEnum nextPlayer;
+	
+	public static void main(String[] args) {
+		// Jatek kezdese
+		startGame();
+		
+		for(int i=0; i<numberOfMatches; i++){
+			// Parti kezdese
+			startMatch();
+			
+			while (!match.isEndOfMatch()) {
+				if (nextPlayer.equals(PlayerEnum.HUMAN)) {
+					// Jatekos lep
+					userStep();
+				} else {
+					// Robot lep
+					robotStep();
+				}
+			}
+			endOfMatch();	
+		}
+		endOfGame();
+	}
 	
 	public static void startGame() {
 		// Partik szamanak lekerdezese
@@ -34,33 +55,16 @@ public class UserInterface {
 		Robot.printMessage("Kezdõdik a parti!");
 		Delay.msDelay(3000);
 	}
-	public static void userStep() {}
+	public static void userStep() {
+		do {
+			Robot.printMessage("Kérem lépjen");
+			//TODO várni kell, hogy lépett-e... Robot metódus
+		} while (!match.setUserStep(Robot.getUserSteps()));
+	}
 	
 	public static void robotStep() {}
 	
 	public static void endOfMatch() {}
 	
 	public static void endOfGame() {}
-
-	public static void main(String[] args) {
-		// Jatek kezdese
-		startGame();
-		
-		for(int i=0; i<numberOfMatches; i++){
-			// Parti kezdese
-			startMatch();
-			
-			// Jatekosok lepnek
-			while (!match.isEndOfMatch()) {
-				if (nextPlayer.equals(PlayerEnum.HUMAN)) {
-					Robot.printMessage("Kérem lépjen");
-				} else {
-					
-				}
-			}
-			
-		}
-		
-
-	}
 }
