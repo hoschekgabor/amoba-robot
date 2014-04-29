@@ -1,10 +1,14 @@
 package nxt.elte.amoba;
 
 public class Robot {
-	Robot robot;
-
-	public Robot getRobot() {
-		return robot;
+	private static Robot instance = null;
+	private Robot() {}
+	
+	public static Robot getInstance() {
+		if(instance == null) {
+			instance = new Robot();
+		}
+		return instance;
 	}
 	
 	public void boardInitialPosition() {}

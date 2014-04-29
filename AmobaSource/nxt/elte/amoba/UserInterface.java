@@ -29,7 +29,9 @@ public class UserInterface {
 		
 	}
 	
-	public static void startMatch() {}
+	public static void startMatch() {
+		match = new Match();
+	}
 	
 	public static void userStep() {}
 	
@@ -40,7 +42,15 @@ public class UserInterface {
 	public static void endOfGame() {}
 
 	public static void main(String[] args) {
+		// Jatek kezdese
 		startGame();
+		
+		for(int i=0; i<numberOfMatches; i++){
+			// Parti kezdese
+			startMatch();
+			
+			
+		}
 		
 
 	}
