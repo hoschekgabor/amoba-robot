@@ -1,5 +1,6 @@
 package nxt.elte.amoba;
 
+import lejos.util.Delay;
 import lejos.util.TextMenu;
 
 public class UserInterface {
@@ -11,14 +12,12 @@ public class UserInterface {
 	public static void startGame() {
 		// Partik szamanak lekerdezese
 		String numMatch[] = {"1", "3", "5", "10"};
-		TextMenu numMatchMenu = new TextMenu(numMatch, 1, "Hány partit szeretne játszani?");
-		numberOfMatches = numMatchMenu.select();
+		numberOfMatches = Robot.printMenu(numMatch, 1, "Hány partit szeretne játszani?");
 		
 		// Kezdo jatekos lekrdezese
 		String playerDecide[] = {"Játékos", "Robot"};
-		TextMenu playerDecideMenu = new TextMenu(playerDecide, 1, "Ki kezdje a játékot?");
 		
-		switch (playerDecideMenu.select()) {
+		switch (Robot.printMenu(playerDecide, 1, "Ki kezdje a játékot?")) {
 		case 2:
 			nextPlayer = PlayerEnum.ROBOT;
 			break;
@@ -30,9 +29,11 @@ public class UserInterface {
 	}
 	
 	public static void startMatch() {
+		// Uj parti letrehozasa, kiirasa, 3mp varas
 		match = new Match();
+		Robot.printMessage("Kezdõdik a parti!");
+		Delay.msDelay(3000);
 	}
-	
 	public static void userStep() {}
 	
 	public static void robotStep() {}
@@ -49,6 +50,14 @@ public class UserInterface {
 			// Parti kezdese
 			startMatch();
 			
+			// Jatekosok lepnek
+			while (!match.isEndOfMatch()) {
+				if (nextPlayer.equals(PlayerEnum.HUMAN)) {
+					Robot.printMessage("Kérem lépjen");
+				} else {
+					
+				}
+			}
 			
 		}
 		

@@ -1,27 +1,30 @@
 package nxt.elte.amoba;
 
 public class Robot {
-	private static Robot instance = null;
+	private static Robot robot;
 	private Robot() {}
 	
 	public static Robot getInstance() {
-		if(instance == null) {
-			instance = new Robot();
+		if (null == robot) {
+			robot = new Robot();
 		}
-		return instance;
+		return robot;
 	}
 	
-	public void boardInitialPosition() {}
+	protected static void boardInitialPosition() {}
 	
-	public void printMenu() {}
+	protected static int printMenu(String[] options, int initChoice, String Question) {
+		int choice = 1;
+		return choice;
+	}
 	
-	public void printMessage() {}
+	protected static void printMessage(String message) {}
 	
-	public ListOfSteps getUserSteps() {
+	protected static ListOfSteps getUserSteps() {
 		ListOfSteps listOfSteps = null;
 		return listOfSteps;
 	}
 	
-	public void setStep() {}
+	protected static void setStep() {}
 
 }
