@@ -2,8 +2,6 @@ package nxt.elte.amoba;
 
 public class Robot {
 	Robot robot;
-	
-	public Robot() {}
 
 	public Robot getRobot() {
 		return robot;

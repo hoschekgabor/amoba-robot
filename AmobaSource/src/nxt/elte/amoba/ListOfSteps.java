@@ -1,9 +1,6 @@
 package nxt.elte.amoba;
 
 public class ListOfSteps {
-
-	public ListOfSteps() {}
-	
 	
 	public void goToBegin() {}
 	

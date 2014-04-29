@@ -5,22 +5,21 @@ public class UserInterface {
 	int robotWins;
 	Match match;
 	PlayerEnum nextPlayer;
+	
+	public static void startGame() {}
+	
+	public static void startMatch() {}
+	
+	public static void userStep() {}
+	
+	public static void robotStep() {}
+	
+	public static void endOfMatch() {}
+	
+	public static void endOfGame() {}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	}
-	
-	public UserInterface() {}
-	
-	public void startGame() {}
-	
-	public void startMatch() {}
-	
-	public void robotStep() {}
-	
-	public void endOfMatch() {}
-	
-	public void endOfGame() {}
-
 }

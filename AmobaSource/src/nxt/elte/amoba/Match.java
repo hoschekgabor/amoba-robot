@@ -1,8 +1,6 @@
 package nxt.elte.amoba;
 
 public class Match {
-
-	public Match() {}
 	
 	public boolean isEndOfMatch() {
 		return false;
