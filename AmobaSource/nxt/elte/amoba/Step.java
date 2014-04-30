@@ -1,18 +1,14 @@
 package nxt.elte.amoba;
 
 public class Step {
-	int row;
-	int column;
-	PlayerEnum player;
+	private int row;
+	private int column;
+	private PlayerEnum player;
 	
 	public Step(int row, int column, PlayerEnum player) {
 		this.row = row;
 		this.column = column;
 		this.player = player;
-	}
-	
-	public int comparePosition(Step step) {
-		return 0;
 	}
 
 	@Override
@@ -42,4 +38,21 @@ public class Step {
 			return false;
 		return true;
 	}
+	
+	public void setPlayer(PlayerEnum player) {
+		this.player = player;
+	}
+
+	public int getRow() {
+		return row;
+	}
+
+	public int getColumn() {
+		return column;
+	}
+
+	public PlayerEnum getPlayer() {
+		return player;
+	}
+	
 }

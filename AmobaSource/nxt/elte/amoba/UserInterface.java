@@ -59,15 +59,13 @@ public class UserInterface {
 		Delay.msDelay(3000);
 	}
 	public static void userStep() {
-		do {
-			Robot.printMessage("Kérem lépjen");
-			//TODO várni kell, hogy lépett-e... Robot metodus
-		} while (!match.setUserStep(Robot.getUserSteps()));
+		Robot.printMessage("Kérem lépjen");
+		match.setUserStep(Robot.getUserSteps());
 		nextPlayer = PlayerEnum.ROBOT;
 	}
 	
 	public static void robotStep() {
-		Board board = new Board();
+		Board board = match.getBoard();
 		Step step = GameIntelligence.getRobotStep(board);
 		Robot.setStep(step);
 		board.setStep(step);
@@ -88,7 +86,7 @@ public class UserInterface {
 	
 	public static void endOfGame() {
 		if (humanWins > robotWins) {
-			Robot.printMessage("Gartuláluk, Öm nyert!");
+			Robot.printMessage("Gartuláluk, Ön nyert!");
 		} else if (humanWins < robotWins) {
 			Robot.printMessage("Haha, én nyertem!!");
 		} else {

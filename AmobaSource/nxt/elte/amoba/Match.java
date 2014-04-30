@@ -1,43 +1,46 @@
 package nxt.elte.amoba;
 
-
 public class Match {
-	Board board;
+	private static Board board = new Board() ;
 	
 	public PlayerEnum isEndOfMatch() {
 		ListOfSteps listOfSteps = board.getSteps();
 		
 		for (int i = 0; i < 3; i++) {
 			// Horizontális ellenõrzés
-			if ((listOfSteps.getStep(i, 1).equals(listOfSteps.getStep(i, 2))) &&
-			    (listOfSteps.getStep(i, 2).equals(listOfSteps.getStep(i, 3)))) {
-				return listOfSteps.getStep(i, 1);
+			if ((!listOfSteps.getStep(i, 0).equals(PlayerEnum.EMPTY)) &&
+				(listOfSteps.getStep(i, 0).equals(listOfSteps.getStep(i, 1))) &&
+			    (listOfSteps.getStep(i, 1).equals(listOfSteps.getStep(i, 2)))) {
+				return listOfSteps.getStep(i, 0);
 			}
 			// Vertikális ellenõrzés
-			if ((listOfSteps.getStep(1, i).equals(listOfSteps.getStep(2, i))) &&
-				    (listOfSteps.getStep(2, i).equals(listOfSteps.getStep(3, i)))) {
-				return listOfSteps.getStep(1, i);
+			if ((!listOfSteps.getStep(0, i).equals(PlayerEnum.EMPTY)) &&
+				(listOfSteps.getStep(0, i).equals(listOfSteps.getStep(1, i))) &&
+				(listOfSteps.getStep(1, i).equals(listOfSteps.getStep(2, i)))) {
+				return listOfSteps.getStep(0, i);
 			}
 		}
 		// Diagonális ellenõrzés 1.
-		if ((listOfSteps.getStep(1, 1).equals(listOfSteps.getStep(2, 2))) && 
-			(listOfSteps.getStep(2, 2).equals(listOfSteps.getStep(3, 3)))) {
-			return listOfSteps.getStep(1, 1);
+		if ((!listOfSteps.getStep(0, 0).equals(PlayerEnum.EMPTY)) &&
+			(listOfSteps.getStep(0, 0).equals(listOfSteps.getStep(1, 1))) && 
+			(listOfSteps.getStep(1, 1).equals(listOfSteps.getStep(2, 2)))) {
+			return listOfSteps.getStep(0, 0);
 		}
 		// Diagonális ellenõrzés 2.
-		if ((listOfSteps.getStep(1, 3).equals(listOfSteps.getStep(2, 2))) && 
-			(listOfSteps.getStep(2, 2).equals(listOfSteps.getStep(3, 1)))) {
-			return listOfSteps.getStep(1, 3);
+		if ((!listOfSteps.getStep(0, 2).equals(PlayerEnum.EMPTY)) &&
+			(listOfSteps.getStep(0, 2).equals(listOfSteps.getStep(1, 1))) && 
+			(listOfSteps.getStep(1, 1).equals(listOfSteps.getStep(2, 0)))) {
+			return listOfSteps.getStep(0, 2);
 		}
 		// Döntetlen ellenõrzése
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (listOfSteps.getStep(i, j) == null) {
+				if (listOfSteps.getStep(i, j) == PlayerEnum.EMPTY) {
 					return PlayerEnum.UNDONE;
 				}
 			}
 		}
-		// Ha nincs senkinek sem három egy vonalban, és egyik mezõ sem null, akkor döntetlen
+		// Ha nincs senkinek sem három egy vonalban, és egyik mezõ sem EMPTY, akkor döntetlen
 		return PlayerEnum.DRAW;
 	}
 
@@ -46,19 +49,8 @@ public class Match {
 	}
 	
 	public boolean setUserStep(ListOfSteps userSteps) {
-		int difference = 0;
 		boolean result;
-		ListOfSteps oldSteps = board.getSteps();
-		userSteps.goToBegin();
-		oldSteps.goToBegin();
-		
-		for (int i = 0; i < 9; i++) {
-			if (oldSteps.getNextStep().equals(userSteps.getNextStep())) {
-				difference++;
-			}
-		}
-		
-		result = ((difference % 2) != 1);
+		result = board.compare(userSteps) == 1;
 		
 		if (result) {
 			board.setListOfSteps(userSteps);
