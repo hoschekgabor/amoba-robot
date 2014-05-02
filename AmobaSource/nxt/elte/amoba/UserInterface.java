@@ -8,22 +8,23 @@ public class UserInterface {
 	static int humanWins;
 	static Match match;
 	static PlayerEnum nextPlayer;
+	static Robot robot = Robot.getInstance();
 	
 	public static void main(String[] args) {
-		// Játek kezdése
+		// Jï¿½tek kezdï¿½se
 		startGame();
 		
 		for(int i=0; i<numberOfMatches; i++){
-			// Parti kezdése
+			// Parti kezdï¿½se
 			startMatch();
 			
-			// Lépések
+			// Lï¿½pï¿½sek
 			do {
 				if (nextPlayer.equals(PlayerEnum.HUMAN)) {
-					// Játekos lép
+					// Jï¿½tekos lï¿½p
 					userStep();
 				} else {
-					// Robot lép
+					// Robot lï¿½p
 					robotStep();
 				}
 			} while (match.isEndOfMatch().equals(PlayerEnum.UNDONE));
@@ -34,14 +35,14 @@ public class UserInterface {
 	}
 	
 	public static void startGame() {
-		// Partik számának lekérdezése
+		// Partik szï¿½mï¿½nak lekï¿½rdezï¿½se
 		String numMatch[] = {"1", "3", "5", "10"};
-		numberOfMatches = Robot.printMenu(numMatch, 1, "Hány partit szeretne játszani?");
+		numberOfMatches = robot.printMenu(numMatch, 1, "Hï¿½ny partit szeretne jï¿½tszani?");
 		
-		// Kezdõ játékos lekérdezése
-		String playerDecide[] = {"Játékos", "Robot"};
+		// Kezdï¿½ jï¿½tï¿½kos lekï¿½rdezï¿½se
+		String playerDecide[] = {"Jï¿½tï¿½kos", "Robot"};
 		
-		switch (Robot.printMenu(playerDecide, 1, "Ki kezdje a játékot?")) {
+		switch (robot.printMenu(playerDecide, 1, "Ki kezdje a jï¿½tï¿½kot?")) {
 		case 2:
 			nextPlayer = PlayerEnum.ROBOT;
 			break;
@@ -53,21 +54,21 @@ public class UserInterface {
 	}
 	
 	public static void startMatch() {
-		// Uj parti létrehozasa, kiírása, 3mp várás
+		// Uj parti lï¿½trehozasa, kiï¿½rï¿½sa, 3mp vï¿½rï¿½s
 		match = new Match();
-		Robot.printMessage("Kezdõdik a parti!");
+		robot.printMessage("Kezdï¿½dik a parti!");
 		Delay.msDelay(3000);
 	}
 	public static void userStep() {
-		Robot.printMessage("Kérem lépjen");
-		match.setUserStep(Robot.getUserSteps());
+		robot.printMessage("Kï¿½rem lï¿½pjen");
+		match.setUserStep(robot.getUserSteps());
 		nextPlayer = PlayerEnum.ROBOT;
 	}
 	
 	public static void robotStep() {
 		Board board = match.getBoard();
 		Step step = GameIntelligence.getRobotStep(board);
-		Robot.setStep(step);
+		robot.setStep(step);
 		board.setStep(step);
 		nextPlayer = PlayerEnum.HUMAN;
 	}
@@ -75,22 +76,22 @@ public class UserInterface {
 	public static void endOfMatch() {
 		if (match.isEndOfMatch().equals(PlayerEnum.HUMAN)) {
 			humanWins++;
-			Robot.printMessage("Gatulálok, megnyerte a partit!");
+			robot.printMessage("Gatulï¿½lok, megnyerte a partit!");
 		}
 		if (match.isEndOfMatch().equals(PlayerEnum.ROBOT)) {
 			robotWins++;
-			Robot.printMessage("Éljen, megnyertem a partit!");
+			robot.printMessage("ï¿½ljen, megnyertem a partit!");
 		}
 		Delay.msDelay(3000);
 	}
 	
 	public static void endOfGame() {
 		if (humanWins > robotWins) {
-			Robot.printMessage("Gartuláluk, Ön nyert!");
+			robot.printMessage("Gartulï¿½luk, ï¿½n nyert!");
 		} else if (humanWins < robotWins) {
-			Robot.printMessage("Haha, én nyertem!!");
+			robot.printMessage("Haha, ï¿½n nyertem!!");
 		} else {
-			Robot.printMessage("Döntetlen!");
+			robot.printMessage("Dï¿½ntetlen!");
 		}
 		Delay.msDelay(5000);
 	}
