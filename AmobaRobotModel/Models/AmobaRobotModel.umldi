@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_-Z934Mp8EeO-VrwwfpQBVw" activeDiagram="_uzGhocqFEeO-VrwwfpQBVw">
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_-Z934Mp8EeO-VrwwfpQBVw" activeDiagram="_-Z937sp8EeO-VrwwfpQBVw">
   <model href="AmobaRobotModel.uml#_qb8akM37EdqwVrslYOdUDA"/>
   <subdiagrams xmi:id="_-Z934cp8EeO-VrwwfpQBVw">
     <model href="AmobaRobotModel.uml#_w8IxIM37EdqwVrslYOdUDA"/>
@@ -772,7 +772,7 @@
   </subdiagrams>
   <subdiagrams xmi:id="_-Z937cp8EeO-VrwwfpQBVw">
     <model href="AmobaRobotModel.uml#_wSRJAHFzEduxYLkhQoh7Ag"/>
-    <diagrams xmi:id="_-Z937sp8EeO-VrwwfpQBVw" position="0,0" size="100,100" name="LogicalView" zoom="0.5" viewport="0,0">
+    <diagrams xmi:id="_-Z937sp8EeO-VrwwfpQBVw" position="0,0" size="100,100" name="LogicalView" zoom="0.75" viewport="566,0">
       <property xmi:id="_-Z9378p8EeO-VrwwfpQBVw" key="pageFormatName" value="A1"/>
       <property xmi:id="_-Z938Mp8EeO-VrwwfpQBVw" key="diagramWidth" value="2376"/>
       <property xmi:id="_-Z938cp8EeO-VrwwfpQBVw" key="diagramHeight" value="3364"/>
@@ -868,7 +868,7 @@
           </contained>
         </contained>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_bDWBMMp_EeO-VrwwfpQBVw" position="1051,31" size="277,-1">
+      <contained xsi:type="di:GraphNode" xmi:id="_bDWBMMp_EeO-VrwwfpQBVw" position="93,949" size="277,-1">
         <anchorage xmi:id="_UfdA8MqAEeO-VrwwfpQBVw" graphEdge="_UffdMMqAEeO-VrwwfpQBVw"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_bDWBMcp_EeO-VrwwfpQBVw" presentation="default">
           <element href="AmobaRobotModel.uml#_bDE7jcp_EeO-VrwwfpQBVw"/>
@@ -928,7 +928,7 @@
           </contained>
         </contained>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_bDjckMp_EeO-VrwwfpQBVw" position="582,609" size="178,-1">
+      <contained xsi:type="di:GraphNode" xmi:id="_bDjckMp_EeO-VrwwfpQBVw" position="564,735" size="178,-1">
         <anchorage xmi:id="_bbe-8MqAEeO-VrwwfpQBVw" graphEdge="_bbhbMMqAEeO-VrwwfpQBVw"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_bDjckcp_EeO-VrwwfpQBVw" presentation="default">
           <element href="AmobaRobotModel.uml#_bDE7psp_EeO-VrwwfpQBVw"/>
@@ -961,7 +961,7 @@
           </contained>
         </contained>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_bDvp0Mp_EeO-VrwwfpQBVw" position="518,364" size="329,-1">
+      <contained xsi:type="di:GraphNode" xmi:id="_bDvp0Mp_EeO-VrwwfpQBVw" position="488,490" size="329,-1">
         <anchorage xmi:id="_MjHcgMqAEeO-VrwwfpQBVw" graphEdge="_MjJRsMqAEeO-VrwwfpQBVw _Te3tsMqAEeO-VrwwfpQBVw _bbhbMMqAEeO-VrwwfpQBVw"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_bDvp0cp_EeO-VrwwfpQBVw" presentation="default">
           <element href="AmobaRobotModel.uml#_bDE7ucp_EeO-VrwwfpQBVw"/>
@@ -1015,8 +1015,8 @@
           </contained>
         </contained>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_bD73EMp_EeO-VrwwfpQBVw" position="582,31" size="201,-1">
-        <anchorage xmi:id="_CGu9McqAEeO-VrwwfpQBVw" graphEdge="_CGyAgMqAEeO-VrwwfpQBVw"/>
+      <contained xsi:type="di:GraphNode" xmi:id="_bD73EMp_EeO-VrwwfpQBVw" position="582,31" size="221,-1">
+        <anchorage xmi:id="_CGu9McqAEeO-VrwwfpQBVw" graphEdge="_CGyAgMqAEeO-VrwwfpQBVw __edr4NH9EeOseeiBMlGsrg _PijoUNIDEeOseeiBMlGsrg _D1qxINIIEeOo3tKkx2L8-w"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_bD73Ecp_EeO-VrwwfpQBVw" presentation="default">
           <element href="AmobaRobotModel.uml#_bDFiksp_EeO-VrwwfpQBVw"/>
         </semanticModel>
@@ -1028,6 +1028,16 @@
           <contained xsi:type="di:GraphNode" xmi:id="_baKlwMp_EeO-VrwwfpQBVw" position="0,0" size="-1,-1">
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_baKlwcp_EeO-VrwwfpQBVw" presentation="default">
               <element href="AmobaRobotModel.uml#_bDFilcp_EeO-VrwwfpQBVw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_6KfpINIDEeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6KfpIdIDEeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_6KiFYNIDEeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_-Br9INIDEeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_-Br9IdIDEeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_-BvAcNIDEeOseeiBMlGsrg"/>
             </semanticModel>
           </contained>
         </contained>
@@ -1071,9 +1081,19 @@
               <element href="AmobaRobotModel.uml#_bDFim8p_EeO-VrwwfpQBVw"/>
             </semanticModel>
           </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_JLMBINIEEeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_JLMBIdIEEeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_JLOdYNIEEeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_LhApANIEEeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_LhApAdIEEeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_LhDFQNIEEeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
         </contained>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_bEB9sMp_EeO-VrwwfpQBVw" position="1001,349" size="378,-1">
+      <contained xsi:type="di:GraphNode" xmi:id="_bEB9sMp_EeO-VrwwfpQBVw" position="63,746" size="378,-1">
         <anchorage xmi:id="_Te0qYMqAEeO-VrwwfpQBVw" graphEdge="_Te3tsMqAEeO-VrwwfpQBVw _UffdMMqAEeO-VrwwfpQBVw"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_bEB9scp_EeO-VrwwfpQBVw" presentation="default">
           <element href="AmobaRobotModel.uml#_bDFioMp_EeO-VrwwfpQBVw"/>
@@ -1145,9 +1165,10 @@
         <contained xsi:type="di:EdgeObjectUV" xmi:id="_MjJRt8qAEeO-VrwwfpQBVw" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_MjJRuMqAEeO-VrwwfpQBVw" visible="false" id="middleNameEdgeObject" offset="0,10"/>
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_MjJRucqAEeO-VrwwfpQBVw" id="stereotypeEdgeObject" offset="0,-10"/>
-        <waypoints>[204, 79, -283, -4]</waypoints>
+        <waypoints>[456, 65, -1, -144]</waypoints>
       </contained>
       <contained xsi:type="di:GraphEdge" xmi:id="_Te3tsMqAEeO-VrwwfpQBVw" anchor="_MjHcgMqAEeO-VrwwfpQBVw _Te0qYMqAEeO-VrwwfpQBVw">
+        <property xmi:id="_-ZjYoNIFEeOo3tKkx2L8-w" key="router" value="Rectilinear"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Te3tscqAEeO-VrwwfpQBVw" presentation="default">
           <element href="AmobaRobotModel.uml#_TficEMqAEeO-VrwwfpQBVw"/>
         </semanticModel>
@@ -1159,8 +1180,11 @@
         <contained xsi:type="di:EdgeObjectUV" xmi:id="_Te3tt8qAEeO-VrwwfpQBVw" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Te3tuMqAEeO-VrwwfpQBVw" visible="false" id="middleNameEdgeObject" offset="0,10"/>
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Te3tucqAEeO-VrwwfpQBVw" id="stereotypeEdgeObject" offset="0,-10"/>
+        <waypoints>[-67, 140, 333, -131]</waypoints>
+        <waypoints>[-409, 140, -9, -131]</waypoints>
       </contained>
       <contained xsi:type="di:GraphEdge" xmi:id="_UffdMMqAEeO-VrwwfpQBVw" anchor="_Te0qYMqAEeO-VrwwfpQBVw _UfdA8MqAEeO-VrwwfpQBVw">
+        <property xmi:id="_-ZcD4NIFEeOo3tKkx2L8-w" key="router" value="Rectilinear"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UffdMcqAEeO-VrwwfpQBVw" presentation="default">
           <element href="AmobaRobotModel.uml#_UgN18MqAEeO-VrwwfpQBVw"/>
         </semanticModel>
@@ -1174,6 +1198,7 @@
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_UffdOcqAEeO-VrwwfpQBVw" id="stereotypeEdgeObject" offset="0,-10"/>
       </contained>
       <contained xsi:type="di:GraphEdge" xmi:id="_bbhbMMqAEeO-VrwwfpQBVw" anchor="_MjHcgMqAEeO-VrwwfpQBVw _bbe-8MqAEeO-VrwwfpQBVw">
+        <property xmi:id="_-Zj_sNIFEeOo3tKkx2L8-w" key="router" value="Rectilinear"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_bbhbMcqAEeO-VrwwfpQBVw" presentation="default">
           <element href="AmobaRobotModel.uml#_bcJGQMqAEeO-VrwwfpQBVw"/>
         </semanticModel>
@@ -1185,6 +1210,289 @@
         <contained xsi:type="di:EdgeObjectUV" xmi:id="_bbhbN8qAEeO-VrwwfpQBVw" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_bbhbOMqAEeO-VrwwfpQBVw" visible="false" id="middleNameEdgeObject" offset="0,10"/>
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_bbhbOcqAEeO-VrwwfpQBVw" id="stereotypeEdgeObject" offset="0,-10"/>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_6KgGoNH3EeOseeiBMlGsrg" position="1018,22" size="304,-1">
+        <anchorage xmi:id="__eaBgNH9EeOseeiBMlGsrg" graphEdge="__edr4NH9EeOseeiBMlGsrg"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6KgGodH3EeOseeiBMlGsrg" presentation="default">
+          <element href="AmobaRobotModel.uml#_6LK1ANH3EeOseeiBMlGsrg"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_6KgGotH3EeOseeiBMlGsrg">
+          <property xmi:id="_6KgGo9H3EeOseeiBMlGsrg" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6KgGpNH3EeOseeiBMlGsrg" presentation="default">
+            <element href="AmobaRobotModel.uml#_6LK1ANH3EeOseeiBMlGsrg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_smQzoNH5EeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_smQzodH5EeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_smW6QNH5EeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_6KgGpdH3EeOseeiBMlGsrg">
+          <property xmi:id="_6KgGptH3EeOseeiBMlGsrg" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6KgGp9H3EeOseeiBMlGsrg" presentation="default">
+            <element href="AmobaRobotModel.uml#_6LK1ANH3EeOseeiBMlGsrg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_hqMHoNH5EeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hqMHodH5EeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_hqlwQNH5EeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="__phCINH5EeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__phCIdH5EeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#__pjeYNH5EeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_F1LTINH6EeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_F1LTIdH6EeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_F1NvYNH6EeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_H6ARoNH6EeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_H6ARodH6EeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_H6Ct4NH6EeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_J_v2INH6EeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_J_v2IdH6EeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_J_xrUNH6EeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_MPVTINH6EeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MPVTIdH6EeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_MPXvYNH6EeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_yxU4oNICEeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_yxU4odICEeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_yxXU4NICEeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphEdge" xmi:id="__edr4NH9EeOseeiBMlGsrg" anchor="_CGu9McqAEeO-VrwwfpQBVw __eaBgNH9EeOseeiBMlGsrg">
+        <property xmi:id="_vKUq0NIEEeOseeiBMlGsrg" key="router" value="Rectilinear"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__edr4dH9EeOseeiBMlGsrg" presentation="default">
+          <element href="AmobaRobotModel.uml#__ewm0NH9EeOseeiBMlGsrg"/>
+        </semanticModel>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="__edr4tH9EeOseeiBMlGsrg" visible="false" id="srcNameEdgeObject" uDistance="10" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="__edr49H9EeOseeiBMlGsrg" id="srcPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="__edr5NH9EeOseeiBMlGsrg" id="srcCountEdgeObject" uDistance="10" vDistance="-10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="__edr5dH9EeOseeiBMlGsrg" visible="false" id="targetNameEdgeObject" uDistance="10" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="__edr5tH9EeOseeiBMlGsrg" id="targetPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="__edr59H9EeOseeiBMlGsrg" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="__edr6NH9EeOseeiBMlGsrg" visible="false" id="middleNameEdgeObject" offset="0,10"/>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="__edr6dH9EeOseeiBMlGsrg" id="stereotypeEdgeObject" offset="0,-10"/>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_Px0loNH-EeOseeiBMlGsrg" position="1018,225" size="387,-1">
+        <anchorage xmi:id="_Piev0NIDEeOseeiBMlGsrg" graphEdge="_PijoUNIDEeOseeiBMlGsrg"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Px0lodH-EeOseeiBMlGsrg" presentation="default">
+          <element href="AmobaRobotModel.uml#_PyJ80NH-EeOseeiBMlGsrg"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_Px0lotH-EeOseeiBMlGsrg">
+          <property xmi:id="_Px0lo9H-EeOseeiBMlGsrg" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Px0lpNH-EeOseeiBMlGsrg" presentation="default">
+            <element href="AmobaRobotModel.uml#_PyJ80NH-EeOseeiBMlGsrg"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_Px1MsNH-EeOseeiBMlGsrg">
+          <property xmi:id="_Px1MsdH-EeOseeiBMlGsrg" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Px1MstH-EeOseeiBMlGsrg" presentation="default">
+            <element href="AmobaRobotModel.uml#_PyJ80NH-EeOseeiBMlGsrg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_BItKsNH_EeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_BItKsdH_EeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_BIo5QNH_EeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_PpproNH_EeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_PpprodH_EeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_PpsH4NH_EeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_Y2FCINIDEeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Y2FCIdIDEeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_Y2HeYNIDEeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphEdge" xmi:id="_PijoUNIDEeOseeiBMlGsrg" anchor="_CGu9McqAEeO-VrwwfpQBVw _Piev0NIDEeOseeiBMlGsrg">
+        <property xmi:id="_vKZjUNIEEeOseeiBMlGsrg" key="router" value="Rectilinear"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_PijoUdIDEeOseeiBMlGsrg" presentation="default">
+          <element href="AmobaRobotModel.uml#_Pi4YcNIDEeOseeiBMlGsrg"/>
+        </semanticModel>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_PijoUtIDEeOseeiBMlGsrg" visible="false" id="srcNameEdgeObject" uDistance="10" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_PijoU9IDEeOseeiBMlGsrg" id="srcPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_PijoVNIDEeOseeiBMlGsrg" id="srcCountEdgeObject" uDistance="10" vDistance="-10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_PijoVdIDEeOseeiBMlGsrg" visible="false" id="targetNameEdgeObject" uDistance="10" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_PijoVtIDEeOseeiBMlGsrg" id="targetPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_PijoV9IDEeOseeiBMlGsrg" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_PijoWNIDEeOseeiBMlGsrg" visible="false" id="middleNameEdgeObject" offset="0,10"/>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_PijoWdIDEeOseeiBMlGsrg" id="stereotypeEdgeObject" offset="0,-10"/>
+        <waypoints>[209, 56, -310, -57]</waypoints>
+        <waypoints>[209, 102, -310, -11]</waypoints>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_rWu54NIDEeOseeiBMlGsrg" position="277,31" size="140,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_rWvg8NIDEeOseeiBMlGsrg" presentation="default">
+          <element href="AmobaRobotModel.uml#_rXK-wNIDEeOseeiBMlGsrg"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_rWvg8dIDEeOseeiBMlGsrg">
+          <property xmi:id="_rWvg8tIDEeOseeiBMlGsrg" key="eStructuralFeatureID" value="39"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_rWvg89IDEeOseeiBMlGsrg" presentation="default">
+            <element href="AmobaRobotModel.uml#_rXK-wNIDEeOseeiBMlGsrg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_ykfhENIDEeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ykfhEdIDEeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_ykikYNIDEeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_0D5eUNIDEeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_0D5eUdIDEeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_0D7TgNIDEeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_1iKzINIDEeOseeiBMlGsrg" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_1iKzIdIDEeOseeiBMlGsrg" presentation="default">
+              <element href="AmobaRobotModel.uml#_1iMoUNIDEeOseeiBMlGsrg"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_KthrsNIGEeOo3tKkx2L8-w" position="1519,38" size="140,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_KthrsdIGEeOo3tKkx2L8-w" presentation="default">
+          <element href="AmobaRobotModel.uml#_Kt_lwNIGEeOo3tKkx2L8-w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_KthrstIGEeOo3tKkx2L8-w">
+          <property xmi:id="_Kthrs9IGEeOo3tKkx2L8-w" key="eStructuralFeatureID" value="39"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_KthrtNIGEeOo3tKkx2L8-w" presentation="default">
+            <element href="AmobaRobotModel.uml#_Kt_lwNIGEeOo3tKkx2L8-w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_PfEvINIGEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_PfEvIdIGEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_PfHycNIGEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_TSrjoNIGEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_TSrjodIGEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_TSt_4NIGEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_VU6hINIGEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VU6hIdIGEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_VU89YNIGEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_Xz_LoNIGEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Xz_LodIGEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_X0Bn4NIGEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_MqzQsNIGEeOo3tKkx2L8-w" position="1525,246" size="140,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MqzQsdIGEeOo3tKkx2L8-w" presentation="default">
+          <element href="AmobaRobotModel.uml#_MrKdENIGEeOo3tKkx2L8-w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_MqzQstIGEeOo3tKkx2L8-w">
+          <property xmi:id="_MqzQs9IGEeOo3tKkx2L8-w" key="eStructuralFeatureID" value="39"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MqzQtNIGEeOo3tKkx2L8-w" presentation="default">
+            <element href="AmobaRobotModel.uml#_MrKdENIGEeOo3tKkx2L8-w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_Hx68kNIOEeOp7cnAjiGgjA" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Hx68kdIOEeOp7cnAjiGgjA" presentation="default">
+              <element href="AmobaRobotModel.uml#_HyC4YNIOEeOp7cnAjiGgjA"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_LQ3vsNIOEeOp7cnAjiGgjA" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_LQ3vsdIOEeOp7cnAjiGgjA" presentation="default">
+              <element href="AmobaRobotModel.uml#_LQ6L8NIOEeOp7cnAjiGgjA"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_OAVmoNIOEeOp7cnAjiGgjA" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_OAVmodIOEeOp7cnAjiGgjA" presentation="default">
+              <element href="AmobaRobotModel.uml#_OAYC4NIOEeOp7cnAjiGgjA"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_yQffoNIGEeOo3tKkx2L8-w" position="948,435" size="684,-1">
+        <anchorage xmi:id="_D1nt0NIIEeOo3tKkx2L8-w" graphEdge="_D1qxINIIEeOo3tKkx2L8-w"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_yQffodIGEeOo3tKkx2L8-w" presentation="default">
+          <element href="AmobaRobotModel.uml#_yQ4hMNIGEeOo3tKkx2L8-w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_yQffotIGEeOo3tKkx2L8-w">
+          <property xmi:id="_yQffo9IGEeOo3tKkx2L8-w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_yQffpNIGEeOo3tKkx2L8-w" presentation="default">
+            <element href="AmobaRobotModel.uml#_yQ4hMNIGEeOo3tKkx2L8-w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="__g9QINIGEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__g9QIdIGEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#__hCvsNIGEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_AXgdoNIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_AXgdodIHEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_AXi54NIHEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_GWlEINIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_GWlEIdIHEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_GWngYNIHEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_H0udINIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_H0udIdIHEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_H0w5YNIHEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_yQgGsNIGEeOo3tKkx2L8-w">
+          <property xmi:id="_yQgGsdIGEeOo3tKkx2L8-w" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_yQgGstIGEeOo3tKkx2L8-w" presentation="default">
+            <element href="AmobaRobotModel.uml#_yQ4hMNIGEeOo3tKkx2L8-w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_fIRcINIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_fIRcIdIHEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_fIVGgNIHEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_w8aMINIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_w8aMIdIHEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_w8coYNIHEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_yYXMwNIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_yYXMwdIHEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_yYZB8NIHEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_z2TxcNIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_z2TxcdIHEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_z2VmoNIHEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_1y72MNIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_1y72MdIHEeOo3tKkx2L8-w" presentation="default">
+              <element href="AmobaRobotModel.uml#_1y-ScNIHEeOo3tKkx2L8-w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphEdge" xmi:id="_D1qxINIIEeOo3tKkx2L8-w" anchor="_CGu9McqAEeO-VrwwfpQBVw _D1nt0NIIEeOo3tKkx2L8-w">
+        <property xmi:id="_JMBKwNIIEeOo3tKkx2L8-w" key="router" value="Rectilinear"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_D1qxIdIIEeOo3tKkx2L8-w" presentation="default">
+          <element href="AmobaRobotModel.uml#_D2BWcNIIEeOo3tKkx2L8-w"/>
+        </semanticModel>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_D1qxItIIEeOo3tKkx2L8-w" visible="false" id="srcNameEdgeObject" uDistance="10" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_D1qxI9IIEeOo3tKkx2L8-w" id="srcPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_D1qxJNIIEeOo3tKkx2L8-w" id="srcCountEdgeObject" uDistance="10" vDistance="-10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_D1qxJdIIEeOo3tKkx2L8-w" visible="false" id="targetNameEdgeObject" uDistance="10" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_D1qxJtIIEeOo3tKkx2L8-w" id="targetPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+        <contained xsi:type="di:EdgeObjectUV" xmi:id="_D1qxJ9IIEeOo3tKkx2L8-w" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_D1qxKNIIEeOo3tKkx2L8-w" visible="false" id="middleNameEdgeObject" offset="0,10"/>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_D1qxKdIIEeOo3tKkx2L8-w" id="stereotypeEdgeObject" offset="0,-10"/>
+        <waypoints>[0, 206, -598, -170]</waypoints>
+        <waypoints>[585, 206, -13, -170]</waypoints>
       </contained>
     </diagrams>
   </subdiagrams>

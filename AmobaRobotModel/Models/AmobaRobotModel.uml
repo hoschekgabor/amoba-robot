@@ -565,6 +565,20 @@
         <details xmi:id="_bDFilMp_EeO-VrwwfpQBVw" key="documentation" value="Ez az osztály felelős a robot fizikai irányításáért.&#xA;&#xA;Ez Singleton kell legyen."/>
       </eAnnotations>
       <ownedAttribute xmi:id="_bDFilcp_EeO-VrwwfpQBVw" name="robot" visibility="private" type="_bDFiksp_EeO-VrwwfpQBVw"/>
+      <ownedAttribute xmi:id="__eVJANH9EeOseeiBMlGsrg" name="boardController" type="_6LK1ANH3EeOseeiBMlGsrg" aggregation="composite" association="__ewm0NH9EeOseeiBMlGsrg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__eVJAdH9EeOseeiBMlGsrg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__eVJAtH9EeOseeiBMlGsrg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PiZQQNIDEeOseeiBMlGsrg" name="tower" type="_PyJ80NH-EeOseeiBMlGsrg" aggregation="composite" association="_Pi4YcNIDEeOseeiBMlGsrg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PiZQQdIDEeOseeiBMlGsrg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PiZQQtIDEeOseeiBMlGsrg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_6KiFYNIDEeOseeiBMlGsrg" name="robotColor" visibility="private" type="_rXK-wNIDEeOseeiBMlGsrg"/>
+      <ownedAttribute xmi:id="_-BvAcNIDEeOseeiBMlGsrg" name="humanColor" visibility="private" type="_rXK-wNIDEeOseeiBMlGsrg"/>
+      <ownedAttribute xmi:id="_D1jcYNIIEeOo3tKkx2L8-w" name="positions" visibility="private" type="_yQ4hMNIGEeOo3tKkx2L8-w" aggregation="composite" association="_D2BWcNIIEeOo3tKkx2L8-w">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D1kDcNIIEeOo3tKkx2L8-w" value="9"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D1kDcdIIEeOo3tKkx2L8-w" value="9"/>
+      </ownedAttribute>
       <ownedOperation xmi:id="_bDFilsp_EeO-VrwwfpQBVw" name="boardInitialPosition"/>
       <ownedOperation xmi:id="_bDFil8p_EeO-VrwwfpQBVw" name="printMenu"/>
       <ownedOperation xmi:id="_bDFimMp_EeO-VrwwfpQBVw" name="printMessage"/>
@@ -574,9 +588,19 @@
       <ownedOperation xmi:id="_bDFim8p_EeO-VrwwfpQBVw" name="setStep">
         <ownedParameter xmi:id="_bDFinMp_EeO-VrwwfpQBVw" name="step" type="_bDE7jcp_EeO-VrwwfpQBVw"/>
       </ownedOperation>
-      <ownedOperation xmi:id="_bDFincp_EeO-VrwwfpQBVw" name="Robot" visibility="private"/>
-      <ownedOperation xmi:id="_bDFinsp_EeO-VrwwfpQBVw" name="getRobot" isStatic="true">
+      <ownedOperation xmi:id="_bDFincp_EeO-VrwwfpQBVw" name="Robot" visibility="private">
+        <eAnnotations xmi:id="_gMHCQNIIEeOo3tKkx2L8-w" source="http://www.topcased.org/documentation">
+          <details xmi:id="_gMHpUNIIEeOo3tKkx2L8-w" key="documentation" value="//"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bDFinsp_EeO-VrwwfpQBVw" name="getInstance" isStatic="true">
         <ownedParameter xmi:id="_bDFin8p_EeO-VrwwfpQBVw" name="return" type="_bDFiksp_EeO-VrwwfpQBVw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_JLOdYNIEEeOseeiBMlGsrg" name="setRobotColor">
+        <ownedParameter xmi:id="_XFxssNIEEeOseeiBMlGsrg" name="color" type="_rXK-wNIDEeOseeiBMlGsrg"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_LhDFQNIEEeOseeiBMlGsrg" name="setHumanColor">
+        <ownedParameter xmi:id="_TJYvoNIEEeOseeiBMlGsrg" name="color" type="_rXK-wNIDEeOseeiBMlGsrg"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_bDFioMp_EeO-VrwwfpQBVw" name="ListOfStep">
@@ -650,6 +674,117 @@
       <ownedEnd xmi:id="_bcJGQcqAEeO-VrwwfpQBVw" name="match" type="_bDE7ucp_EeO-VrwwfpQBVw" association="_bcJGQMqAEeO-VrwwfpQBVw">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bcJGQsqAEeO-VrwwfpQBVw" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bcJGQ8qAEeO-VrwwfpQBVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6LK1ANH3EeOseeiBMlGsrg" name="BoardController">
+      <eAnnotations xmi:id="_dxRmQNICEeOseeiBMlGsrg" source="http://www.topcased.org/documentation">
+        <details xmi:id="_dxV3sNICEeOseeiBMlGsrg" key="documentation" value="Ez az osztály reprezentálja a játéktáblát mozgató szerkezetet, valamint az emberi lépést érzékelő távolságérzékelőt."/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_smW6QNH5EeOseeiBMlGsrg" name="position" type="_Kt_lwNIGEeOo3tKkx2L8-w"/>
+      <ownedAttribute xmi:id="_L-ONoNH9EeOseeiBMlGsrg" name="BASE_POSITION" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_zGgQsNH9EeOseeiBMlGsrg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_om-90NH9EeOseeiBMlGsrg" name="LEFT_SIDE" isReadOnly="true">
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_1ZwFsNH9EeOseeiBMlGsrg"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_hqlwQNH5EeOseeiBMlGsrg" name="BoardController"/>
+      <ownedOperation xmi:id="__pjeYNH5EeOseeiBMlGsrg" name="moveToBasePosition"/>
+      <ownedOperation xmi:id="_F1NvYNH6EeOseeiBMlGsrg" name="moveToOppositeSide"/>
+      <ownedOperation xmi:id="_H6Ct4NH6EeOseeiBMlGsrg" name="moveToLeftSide"/>
+      <ownedOperation xmi:id="_J_xrUNH6EeOseeiBMlGsrg" name="moveToRightSide"/>
+      <ownedOperation xmi:id="_MPXvYNH6EeOseeiBMlGsrg" name="moveTo">
+        <ownedParameter xmi:id="_Pf9WYNH6EeOseeiBMlGsrg" name="position" type="_Kt_lwNIGEeOo3tKkx2L8-w"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_yxXU4NICEeOseeiBMlGsrg" name="isHumanStepped">
+        <ownedParameter xmi:id="_3P9AENICEeOseeiBMlGsrg" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="__ewm0NH9EeOseeiBMlGsrg" name="A_&lt;robot>_&lt;boardController>" memberEnd="__ewm0dH9EeOseeiBMlGsrg __eVJANH9EeOseeiBMlGsrg">
+      <ownedEnd xmi:id="__ewm0dH9EeOseeiBMlGsrg" name="robot" type="_bDFiksp_EeO-VrwwfpQBVw" association="__ewm0NH9EeOseeiBMlGsrg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__ewm0tH9EeOseeiBMlGsrg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__ewm09H9EeOseeiBMlGsrg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PyJ80NH-EeOseeiBMlGsrg" name="Tower">
+      <eAnnotations xmi:id="_bU2AENICEeOseeiBMlGsrg" source="http://www.topcased.org/documentation">
+        <details xmi:id="_bU4cUNICEeOseeiBMlGsrg" key="documentation" value="Ez az osztály reprezentálja azt a szerkezeti egységet, ami a színérzékelést végzi, valamint a robot golyóit elhelyezi a táblán."/>
+      </eAnnotations>
+      <ownedOperation xmi:id="_BIo5QNH_EeOseeiBMlGsrg" name="moveTo">
+        <ownedParameter xmi:id="_BIo5QdH_EeOseeiBMlGsrg" name="position" type="_MrKdENIGEeOo3tKkx2L8-w"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_PpsH4NH_EeOseeiBMlGsrg" name="readField">
+        <ownedParameter xmi:id="_iVecINIAEeOseeiBMlGsrg" name="return" type="_rXK-wNIDEeOseeiBMlGsrg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Y2HeYNIDEeOseeiBMlGsrg" name="pushBall"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Pi4YcNIDEeOseeiBMlGsrg" name="A_&lt;robot>_&lt;tower>" memberEnd="_Pi4_gNIDEeOseeiBMlGsrg _PiZQQNIDEeOseeiBMlGsrg">
+      <ownedEnd xmi:id="_Pi4_gNIDEeOseeiBMlGsrg" name="robot" type="_bDFiksp_EeO-VrwwfpQBVw" association="_Pi4YcNIDEeOseeiBMlGsrg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pi4_gdIDEeOseeiBMlGsrg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pi4_gtIDEeOseeiBMlGsrg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_rXK-wNIDEeOseeiBMlGsrg" name="Color">
+      <ownedLiteral xmi:id="_ykikYNIDEeOseeiBMlGsrg" name="RED"/>
+      <ownedLiteral xmi:id="_0D7TgNIDEeOseeiBMlGsrg" name="GREEN"/>
+      <ownedLiteral xmi:id="_1iMoUNIDEeOseeiBMlGsrg" name="OTHER"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_Kt_lwNIGEeOo3tKkx2L8-w" name="BoardPosition">
+      <ownedLiteral xmi:id="_PfHycNIGEeOo3tKkx2L8-w" name="BASE_POSITION"/>
+      <ownedLiteral xmi:id="_TSt_4NIGEeOo3tKkx2L8-w" name="OPPOSITE_SIDE"/>
+      <ownedLiteral xmi:id="_VU89YNIGEeOo3tKkx2L8-w" name="LEFT_SIDE"/>
+      <ownedLiteral xmi:id="_X0Bn4NIGEeOo3tKkx2L8-w" name="RIGHT_SIDE"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_MrKdENIGEeOo3tKkx2L8-w" name="TowerPosition">
+      <ownedLiteral xmi:id="_HyC4YNIOEeOp7cnAjiGgjA" name="POSITION1"/>
+      <ownedLiteral xmi:id="_LQ6L8NIOEeOp7cnAjiGgjA" name="POSITION2"/>
+      <ownedLiteral xmi:id="_OAYC4NIOEeOp7cnAjiGgjA" name="POSITION3"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yQ4hMNIGEeOo3tKkx2L8-w" name="Position">
+      <eAnnotations xmi:id="_-YMRQNIGEeOo3tKkx2L8-w" source="http://www.topcased.org/documentation">
+        <details xmi:id="_-YOGcNIGEeOo3tKkx2L8-w" key="documentation" value="A tábla minden mezőjéhez meghatároz egy board és egy tower pozíciót."/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="__hCvsNIGEeOo3tKkx2L8-w" name="row" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AXi54NIHEeOo3tKkx2L8-w" name="column" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GWngYNIHEeOo3tKkx2L8-w" name="boardPosition" visibility="private" type="_Kt_lwNIGEeOo3tKkx2L8-w"/>
+      <ownedAttribute xmi:id="_H0w5YNIHEeOo3tKkx2L8-w" name="towerPosition" visibility="private" type="_MrKdENIGEeOo3tKkx2L8-w"/>
+      <ownedOperation xmi:id="_fIVGgNIHEeOo3tKkx2L8-w" name="Position">
+        <ownedParameter xmi:id="_hHQ4YNIHEeOo3tKkx2L8-w" name="row">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_j5wOINIHEeOo3tKkx2L8-w" name="column">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_mYwAINIHEeOo3tKkx2L8-w" name="boardPosition" type="_Kt_lwNIGEeOo3tKkx2L8-w"/>
+        <ownedParameter xmi:id="_ptOooNIHEeOo3tKkx2L8-w" name="towerPosition" type="_MrKdENIGEeOo3tKkx2L8-w"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_w8coYNIHEeOo3tKkx2L8-w" name="getRow">
+        <ownedParameter xmi:id="_44bAcNIHEeOo3tKkx2L8-w" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_yYZB8NIHEeOo3tKkx2L8-w" name="getColumn">
+        <ownedParameter xmi:id="_44cOkNIHEeOo3tKkx2L8-w" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_z2VmoNIHEeOo3tKkx2L8-w" name="getBoardPosition">
+        <ownedParameter xmi:id="_6no7UNIHEeOo3tKkx2L8-w" name="return" type="_Kt_lwNIGEeOo3tKkx2L8-w" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_1y-ScNIHEeOo3tKkx2L8-w" name="getTowerPosition">
+        <ownedParameter xmi:id="_8Bx-ENIHEeOo3tKkx2L8-w" name="return" type="_MrKdENIGEeOo3tKkx2L8-w" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_D2BWcNIIEeOo3tKkx2L8-w" name="A_&lt;robot>_&lt;position>" memberEnd="_D2BWcdIIEeOo3tKkx2L8-w _D1jcYNIIEeOo3tKkx2L8-w">
+      <ownedEnd xmi:id="_D2BWcdIIEeOo3tKkx2L8-w" name="robot" type="_bDFiksp_EeO-VrwwfpQBVw" association="_D2BWcNIIEeOo3tKkx2L8-w">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D2BWctIIEeOo3tKkx2L8-w" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D2BWc9IIEeOo3tKkx2L8-w" value="1"/>
       </ownedEnd>
     </packagedElement>
   </packagedElement>
