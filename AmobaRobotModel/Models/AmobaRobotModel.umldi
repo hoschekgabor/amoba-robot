@@ -772,7 +772,7 @@
   </subdiagrams>
   <subdiagrams xmi:id="_-Z937cp8EeO-VrwwfpQBVw">
     <model href="AmobaRobotModel.uml#_wSRJAHFzEduxYLkhQoh7Ag"/>
-    <diagrams xmi:id="_-Z937sp8EeO-VrwwfpQBVw" position="0,0" size="100,100" name="LogicalView" zoom="0.75" viewport="566,0">
+    <diagrams xmi:id="_-Z937sp8EeO-VrwwfpQBVw" position="0,0" size="100,100" name="LogicalView" zoom="0.75" viewport="220,0">
       <property xmi:id="_-Z9378p8EeO-VrwwfpQBVw" key="pageFormatName" value="A1"/>
       <property xmi:id="_-Z938Mp8EeO-VrwwfpQBVw" key="diagramWidth" value="2376"/>
       <property xmi:id="_-Z938cp8EeO-VrwwfpQBVw" key="diagramHeight" value="3364"/>
@@ -1415,7 +1415,7 @@
           </contained>
         </contained>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_yQffoNIGEeOo3tKkx2L8-w" position="948,435" size="684,-1">
+      <contained xsi:type="di:GraphNode" xmi:id="_yQffoNIGEeOo3tKkx2L8-w" position="1018,435" size="480,-1">
         <anchorage xmi:id="_D1nt0NIIEeOo3tKkx2L8-w" graphEdge="_D1qxINIIEeOo3tKkx2L8-w"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_yQffodIGEeOo3tKkx2L8-w" presentation="default">
           <element href="AmobaRobotModel.uml#_yQ4hMNIGEeOo3tKkx2L8-w"/>
@@ -1425,16 +1425,6 @@
           <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_yQffpNIGEeOo3tKkx2L8-w" presentation="default">
             <element href="AmobaRobotModel.uml#_yQ4hMNIGEeOo3tKkx2L8-w"/>
           </semanticModel>
-          <contained xsi:type="di:GraphNode" xmi:id="__g9QINIGEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
-            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__g9QIdIGEeOo3tKkx2L8-w" presentation="default">
-              <element href="AmobaRobotModel.uml#__hCvsNIGEeOo3tKkx2L8-w"/>
-            </semanticModel>
-          </contained>
-          <contained xsi:type="di:GraphNode" xmi:id="_AXgdoNIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
-            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_AXgdodIHEeOo3tKkx2L8-w" presentation="default">
-              <element href="AmobaRobotModel.uml#_AXi54NIHEeOo3tKkx2L8-w"/>
-            </semanticModel>
-          </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_GWlEINIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_GWlEIdIHEeOo3tKkx2L8-w" presentation="default">
               <element href="AmobaRobotModel.uml#_GWngYNIHEeOo3tKkx2L8-w"/>
@@ -1454,16 +1444,6 @@
           <contained xsi:type="di:GraphNode" xmi:id="_fIRcINIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_fIRcIdIHEeOo3tKkx2L8-w" presentation="default">
               <element href="AmobaRobotModel.uml#_fIVGgNIHEeOo3tKkx2L8-w"/>
-            </semanticModel>
-          </contained>
-          <contained xsi:type="di:GraphNode" xmi:id="_w8aMINIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
-            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_w8aMIdIHEeOo3tKkx2L8-w" presentation="default">
-              <element href="AmobaRobotModel.uml#_w8coYNIHEeOo3tKkx2L8-w"/>
-            </semanticModel>
-          </contained>
-          <contained xsi:type="di:GraphNode" xmi:id="_yYXMwNIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
-            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_yYXMwdIHEeOo3tKkx2L8-w" presentation="default">
-              <element href="AmobaRobotModel.uml#_yYZB8NIHEeOo3tKkx2L8-w"/>
             </semanticModel>
           </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_z2TxcNIHEeOo3tKkx2L8-w" position="0,0" size="-1,-1">
@@ -1491,8 +1471,8 @@
         <contained xsi:type="di:EdgeObjectUV" xmi:id="_D1qxJ9IIEeOo3tKkx2L8-w" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_D1qxKNIIEeOo3tKkx2L8-w" visible="false" id="middleNameEdgeObject" offset="0,10"/>
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_D1qxKdIIEeOo3tKkx2L8-w" id="stereotypeEdgeObject" offset="0,-10"/>
-        <waypoints>[0, 206, -598, -170]</waypoints>
-        <waypoints>[585, 206, -13, -170]</waypoints>
+        <waypoints>[-16, 214, -582, -124]</waypoints>
+        <waypoints>[569, 214, 3, -124]</waypoints>
       </contained>
     </diagrams>
   </subdiagrams>

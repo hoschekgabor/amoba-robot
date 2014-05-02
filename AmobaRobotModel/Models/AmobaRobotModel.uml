@@ -744,35 +744,13 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_yQ4hMNIGEeOo3tKkx2L8-w" name="Position">
       <eAnnotations xmi:id="_-YMRQNIGEeOo3tKkx2L8-w" source="http://www.topcased.org/documentation">
-        <details xmi:id="_-YOGcNIGEeOo3tKkx2L8-w" key="documentation" value="A tábla minden mezőjéhez meghatároz egy board és egy tower pozíciót."/>
+        <details xmi:id="_-YOGcNIGEeOo3tKkx2L8-w" key="documentation" value="A tábla minden mezőjéhez meghatározott board és tower pozíció tárolására szolgáló osztály."/>
       </eAnnotations>
-      <ownedAttribute xmi:id="__hCvsNIGEeOo3tKkx2L8-w" name="row" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_AXi54NIHEeOo3tKkx2L8-w" name="column" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
       <ownedAttribute xmi:id="_GWngYNIHEeOo3tKkx2L8-w" name="boardPosition" visibility="private" type="_Kt_lwNIGEeOo3tKkx2L8-w"/>
       <ownedAttribute xmi:id="_H0w5YNIHEeOo3tKkx2L8-w" name="towerPosition" visibility="private" type="_MrKdENIGEeOo3tKkx2L8-w"/>
       <ownedOperation xmi:id="_fIVGgNIHEeOo3tKkx2L8-w" name="Position">
-        <ownedParameter xmi:id="_hHQ4YNIHEeOo3tKkx2L8-w" name="row">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_j5wOINIHEeOo3tKkx2L8-w" name="column">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
         <ownedParameter xmi:id="_mYwAINIHEeOo3tKkx2L8-w" name="boardPosition" type="_Kt_lwNIGEeOo3tKkx2L8-w"/>
         <ownedParameter xmi:id="_ptOooNIHEeOo3tKkx2L8-w" name="towerPosition" type="_MrKdENIGEeOo3tKkx2L8-w"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_w8coYNIHEeOo3tKkx2L8-w" name="getRow">
-        <ownedParameter xmi:id="_44bAcNIHEeOo3tKkx2L8-w" name="return" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_yYZB8NIHEeOo3tKkx2L8-w" name="getColumn">
-        <ownedParameter xmi:id="_44cOkNIHEeOo3tKkx2L8-w" name="return" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:id="_z2VmoNIHEeOo3tKkx2L8-w" name="getBoardPosition">
         <ownedParameter xmi:id="_6no7UNIHEeOo3tKkx2L8-w" name="return" type="_Kt_lwNIGEeOo3tKkx2L8-w" direction="return"/>
