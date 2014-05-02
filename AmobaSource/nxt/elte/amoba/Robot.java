@@ -1,5 +1,11 @@
 package nxt.elte.amoba;
 
+import lejos.nxt.Button;
+import lejos.nxt.LCD;
+import lejos.util.TextMenu;
+import nxt.elte.amoba.exception.FatalException;
+import nxt.elte.amoba.exception.PlayerSetupException;
+
 public class Robot {
 
 	private final static int SENSORPORT_1 = 0;
@@ -12,28 +18,39 @@ public class Robot {
 
 	private static Robot robot;
 
+	private boolean checked = false; 
 	private Color robotColor;
 	private Color humanColor;
-	private final BoardController boardController = new BoardController(MOTOR_A, SENSORPORT_1);;
+	private final BoardController boardController = new BoardController(
+			MOTOR_A, SENSORPORT_1);;
 	private final Tower tower = new Tower(MOTOR_B, MOTOR_C);;
 	// Pozíciókhoz tartozó board és tower pozíciók
 	// TODO: A pozíciókat még meg kell adni.
 	private final Position[][] positions = {
 			{
-					new Position(BoardPosition.BASE_POSITION, TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION, TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION, TowerPosition.POSITION_1) },
+					new Position(BoardPosition.BASE_POSITION,
+							TowerPosition.POSITION_1),
+					new Position(BoardPosition.BASE_POSITION,
+							TowerPosition.POSITION_1),
+					new Position(BoardPosition.BASE_POSITION,
+							TowerPosition.POSITION_1) },
 			{
-					new Position(BoardPosition.BASE_POSITION, TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION, TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION, TowerPosition.POSITION_1) },
+					new Position(BoardPosition.BASE_POSITION,
+							TowerPosition.POSITION_1),
+					new Position(BoardPosition.BASE_POSITION,
+							TowerPosition.POSITION_1),
+					new Position(BoardPosition.BASE_POSITION,
+							TowerPosition.POSITION_1) },
 			{
-					new Position(BoardPosition.BASE_POSITION, TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION, TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION, TowerPosition.POSITION_1) }
-	};
+					new Position(BoardPosition.BASE_POSITION,
+							TowerPosition.POSITION_1),
+					new Position(BoardPosition.BASE_POSITION,
+							TowerPosition.POSITION_1),
+					new Position(BoardPosition.BASE_POSITION,
+							TowerPosition.POSITION_1) } };
 
-	private Robot() {}
+	private Robot() {
+	}
 
 	public static Robot getInstance() {
 		if (null == robot) {
@@ -42,28 +59,94 @@ public class Robot {
 		return robot;
 	}
 
-	protected void boardInitialPosition() {
+	public void boardInitialPosition() {
 		boardController.moveToBasePosition();
 	}
 
-	protected int printMenu(String[] options, int initChoice, String Question) {
+	public int printMenu(String[] options, int initChoice, String Question) {
 		int choice = 1;
-		//TODO: Meg kell írni.
+		LCD.clear();
+		TextMenu testMenu = new TextMenu(options, choice, "Choose a test type!");
+		choice = testMenu.select();
 		return choice;
 	}
 
-	protected void printMessage(String message) {
+	/**
+	 * Print any message to LCD of NXT Bricket.
+	 * If waitForPress is true, then this method return only the user pressed any key on bricket.
+	 * @param message
+	 * @param waitForPress
+	 */
+	public void printMessage(String message, boolean waitForPress) {
+		LCD.clear();
+		LCD.drawString(message, 0, 0);
+		if (waitForPress) {
+			Button.waitForAnyPress();
+		}
+	}
+	
+	public void printMessage(String message) {
+		printMessage(message, false);
 	}
 
-	protected ListOfSteps getUserSteps() {
-		//TODO: Meg kell írni.
-		ListOfSteps listOfSteps = null;
-		
+	public ListOfSteps getUserSteps() throws PlayerSetupException, FatalException {
+		check();
+
+		Position pos;
+		PlayerEnum player;
+		Color color;
+		ListOfSteps listOfSteps = new ListOfSteps();
+
+		for (int row = 0; row < 3; row++) {
+			for (int col = 0; col < 0; col++) {
+				pos = positions[row][col];
+				boardController.moveTo(pos.getBoardPosition());
+				tower.moveTo(pos.getTowerPosition());
+				color = tower.readField();
+				if (color == this.humanColor) {
+					player = PlayerEnum.HUMAN;
+				} else if (color == this.robotColor) {
+					player = PlayerEnum.ROBOT;
+				} else if (color == Color.OTHER) {
+					player = PlayerEnum.EMPTY;
+				} else {
+					// ide nem szabad belekeveredni.
+					throw new FatalException(
+							"Can't read the color of ball on this position: "
+									+ (row + 1) + ", " + (col + 1) + "!");
+				}
+				listOfSteps.addStep(new Step(row, col, player));
+			}
+		}
 		return listOfSteps;
 	}
 
-	protected static void setStep(Step step) {
-		// TODO: Meg kell írni
+	private void check() throws PlayerSetupException {
+		// Ha már ellenőriztük, akkor nem ellenőrzünk megint.
+		if (checked) return;
+		
+		if (robotColor == null) {
+			throw new PlayerSetupException(
+					"The color of Robot isn't set up! Use the Robot.setRobotColor(color) method!");
+		}
+
+		if (humanColor == null) {
+			throw new PlayerSetupException(
+					"The color of human player isn't set up! Use the Robot.setHumanColor(color) method!");
+		}
+
+		if (robotColor == humanColor) {
+			throw new PlayerSetupException(
+					"The color of human equal color of robot!");
+		}
+	}
+
+	public void setStep(Step step) throws PlayerSetupException {
+		check();
+		Position pos = positions[step.getRow()][step.getColumn()];
+		boardController.moveTo(pos.getBoardPosition());
+		tower.moveTo(pos.getTowerPosition());
+		tower.pushBall();
 	}
 
 	public Color getRobotColor() {
@@ -72,6 +155,7 @@ public class Robot {
 
 	public void setRobotColor(Color robotColor) {
 		this.robotColor = robotColor;
+		checked = false;
 	}
 
 	public Color getHumanColor() {
@@ -80,5 +164,6 @@ public class Robot {
 
 	public void setHumanColor(Color humanColor) {
 		this.humanColor = humanColor;
+		checked = false;
 	}
 }

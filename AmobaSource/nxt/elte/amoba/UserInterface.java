@@ -11,20 +11,20 @@ public class UserInterface {
 	static Robot robot = Robot.getInstance();
 	
 	public static void main(String[] args) {
-		// J�tek kezd�se
+		// Játek kezdése
 		startGame();
 		
 		for(int i=0; i<numberOfMatches; i++){
-			// Parti kezd�se
+			// Parti kezdése
 			startMatch();
 			
 			// L�p�sek
 			do {
 				if (nextPlayer.equals(PlayerEnum.HUMAN)) {
-					// J�tekos l�p
+					// Játekos lép
 					userStep();
 				} else {
-					// Robot l�p
+					// Robot lép
 					robotStep();
 				}
 			} while (match.isEndOfMatch().equals(PlayerEnum.UNDONE));
@@ -35,12 +35,12 @@ public class UserInterface {
 	}
 	
 	public static void startGame() {
-		// Partik sz�m�nak lek�rdez�se
+		// Partik számának lekérdezése
 		String numMatch[] = {"1", "3", "5", "10"};
-		numberOfMatches = robot.printMenu(numMatch, 1, "H�ny partit szeretne j�tszani?");
+		numberOfMatches = robot.printMenu(numMatch, 1, "Hány partit szeretne játszani?");
 		
-		// Kezd� j�t�kos lek�rdez�se
-		String playerDecide[] = {"J�t�kos", "Robot"};
+		// Kezdő játékos lekérdezése
+		String playerDecide[] = {"Játékos", "Robot"};
 		
 		switch (robot.printMenu(playerDecide, 1, "Ki kezdje a j�t�kot?")) {
 		case 2:
@@ -54,18 +54,20 @@ public class UserInterface {
 	}
 	
 	public static void startMatch() {
-		// Uj parti l�trehozasa, ki�r�sa, 3mp v�r�s
+		// Új parti létrehozasa, kiírása, 3mp várás
 		match = new Match();
-		robot.printMessage("Kezd�dik a parti!");
+		robot.printMessage("Kezdődik a parti!");
 		Delay.msDelay(3000);
 	}
 	public static void userStep() {
-		robot.printMessage("K�rem l�pjen");
+		//TODO Exception kezelést megcsinálni
+		robot.printMessage("Kérem lépjen");
 		match.setUserStep(robot.getUserSteps());
 		nextPlayer = PlayerEnum.ROBOT;
 	}
 	
 	public static void robotStep() {
+		//TODO Exception kezelést megcsinálni
 		Board board = match.getBoard();
 		Step step = GameIntelligence.getRobotStep(board);
 		robot.setStep(step);
@@ -76,22 +78,22 @@ public class UserInterface {
 	public static void endOfMatch() {
 		if (match.isEndOfMatch().equals(PlayerEnum.HUMAN)) {
 			humanWins++;
-			robot.printMessage("Gatul�lok, megnyerte a partit!");
+			robot.printMessage("Gatulálok, megnyerte a partit!");
 		}
 		if (match.isEndOfMatch().equals(PlayerEnum.ROBOT)) {
 			robotWins++;
-			robot.printMessage("�ljen, megnyertem a partit!");
+			robot.printMessage("Éljen, megnyertem a partit!");
 		}
 		Delay.msDelay(3000);
 	}
 	
 	public static void endOfGame() {
 		if (humanWins > robotWins) {
-			robot.printMessage("Gartul�luk, �n nyert!");
+			robot.printMessage("Gartuláluk, Ön nyert!");
 		} else if (humanWins < robotWins) {
-			robot.printMessage("Haha, �n nyertem!!");
+			robot.printMessage("Haha, Én nyertem!!");
 		} else {
-			robot.printMessage("D�ntetlen!");
+			robot.printMessage("Döntetlen!");
 		}
 		Delay.msDelay(5000);
 	}
