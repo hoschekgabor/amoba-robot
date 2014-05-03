@@ -8,13 +8,13 @@ import nxt.elte.amoba.exception.PlayerSetupException;
 
 public class Robot {
 
-	private final static int SENSORPORT_1 = 0;
-	private final static int SENSORPORT_2 = 1;
-	private final static int SENSORPORT_3 = 2;
-	private final static int SENSORPORT_4 = 3;
-	private final static int MOTOR_A = 0;
-	private final static int MOTOR_B = 1;
-	private final static int MOTOR_C = 2;
+	public final static int SENSORPORT_1 = 0;
+	public final static int SENSORPORT_2 = 1;
+	public final static int SENSORPORT_3 = 2;
+	public final static int SENSORPORT_4 = 3;
+	public final static int MOTOR_A = 0;
+	public final static int MOTOR_B = 1;
+	public final static int MOTOR_C = 2;
 
 	private static Robot robot;
 
@@ -22,8 +22,8 @@ public class Robot {
 	private Color robotColor;
 	private Color humanColor;
 	private final BoardController boardController = new BoardController(
-			MOTOR_A, SENSORPORT_1);;
-	private final Tower tower = new Tower(MOTOR_B, MOTOR_C);;
+			MOTOR_C, SENSORPORT_2);
+	private final Tower tower = new Tower(MOTOR_B, MOTOR_A);;
 	// Pozíciókhoz tartozó board és tower pozíciók
 	// TODO: A pozíciókat még meg kell adni.
 	private final Position[][] positions = {

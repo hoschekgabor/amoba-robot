@@ -8,7 +8,8 @@ import lejos.util.Delay;
 
 public class BoardController {
 	// Constant variables	
-	private final int MOTOR_SPEED = 100;
+	private final int MOTOR_SPEED = 140;
+	private final int ANGLE_TO_BASE_POSITION = 12;
 	private final NXTRegulatedMotor boardMotor;
 	private TouchSensor touchSensor;
 	
@@ -33,7 +34,7 @@ public class BoardController {
 		while (!touchSensor.isPressed())
 			;
 		boardMotor. stop();
-		boardMotor.rotate(13);
+		boardMotor.rotate(ANGLE_TO_BASE_POSITION);
 		
 		position = BoardPosition.BASE_POSITION;
 	}
@@ -58,8 +59,7 @@ public class BoardController {
 	}
 	
 	public void moveTo(BoardPosition position) {
-		int moving = (this.position.getIntValue() + position.getIntValue()) % 4;
-		
+		int moving = (position.getIntValue() - this.position.getIntValue()) % 4;
 		boardMotor.rotate(-90 * moving);
 		this.position = position;
 	}
