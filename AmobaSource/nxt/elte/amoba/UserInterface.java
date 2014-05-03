@@ -1,5 +1,7 @@
 package nxt.elte.amoba;
 
+import nxt.elte.amoba.exception.FatalException;
+import nxt.elte.amoba.exception.PlayerSetupException;
 import lejos.util.Delay;
 
 public class UserInterface {
@@ -60,9 +62,16 @@ public class UserInterface {
 		Delay.msDelay(3000);
 	}
 	public static void userStep() {
-		//TODO Exception kezelést megcsinálni
 		robot.printMessage("Kérem lépjen");
-		match.setUserStep(robot.getUserSteps());
+		try {
+			match.setUserStep(robot.getUserSteps());
+		} catch (FatalException e) {
+			// TODO Exception kezelést megcsinálni
+			e.printStackTrace();
+		} catch (PlayerSetupException e) {
+			// TODO Exception kezelést megcsinálni
+			e.printStackTrace();
+		}
 		nextPlayer = PlayerEnum.ROBOT;
 	}
 	
@@ -70,7 +79,12 @@ public class UserInterface {
 		//TODO Exception kezelést megcsinálni
 		Board board = match.getBoard();
 		Step step = GameIntelligence.getRobotStep(board);
-		robot.setStep(step);
+		try {
+			robot.setStep(step);
+		} catch (PlayerSetupException e) {
+			//TODO Exception kezelést megcsinálni
+			e.printStackTrace();
+		}
 		board.setStep(step);
 		nextPlayer = PlayerEnum.HUMAN;
 	}
