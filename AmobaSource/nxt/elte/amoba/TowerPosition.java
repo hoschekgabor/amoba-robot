@@ -6,7 +6,11 @@ package nxt.elte.amoba;
  *
  */
 public enum TowerPosition {
-	POSITION_1,
-	POSITION_2,
-	POSITION_3
+	BASE,
+	READ_CORNER,
+	PUSH_CORNER,
+	READ_MIDDLE,
+	PUSH_MIDDLE,
+	READ_CENTER,
+	PUSH_CENTER
 }

@@ -7,9 +7,13 @@ package nxt.elte.amoba;
  */
 public enum BoardPosition {
 	BASE_POSITION(0),
-	LEFT_SIDE(1),
-	OPPOSITE_SIDE(2),
-	RIGHT_SIDE(3);
+	BASE_LEFT_POSIITION(1),
+	LEFT_SIDE(2),
+	LEFT_OPPOSITE(3),
+	OPPOSITE_SIDE(4),
+	OPPOSITE_RIGHT(5),
+	RIGHT_SIDE(6),
+	RIGHT_BASE(7);
 	
 	private final int value;
 	

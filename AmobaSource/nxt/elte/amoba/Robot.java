@@ -23,31 +23,40 @@ public class Robot {
 	private Color humanColor;
 	private final BoardController boardController = new BoardController(
 			MOTOR_C, SENSORPORT_2);
-	private final Tower tower = new Tower(MOTOR_B, MOTOR_A);;
+	private final Tower tower = new Tower(MOTOR_B, MOTOR_A, SENSORPORT_1);
 	// Pozíciókhoz tartozó board és tower pozíciók
 	// TODO: A pozíciókat még meg kell adni.
 	private final Position[][] positions = {
 			{
+					//0 0
+					new Position(BoardPosition.BASE_LEFT_POSIITION,
+							TowerPosition.READ_CORNER),
+					//0 1
 					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.POSITION_1) },
+							TowerPosition.READ_MIDDLE),
+					//0 2
+					new Position(BoardPosition.RIGHT_BASE,
+							TowerPosition.READ_CORNER) },
 			{
+					//1 0
+					new Position(BoardPosition.LEFT_SIDE,
+							TowerPosition.READ_MIDDLE),
+					//1 1
 					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.POSITION_1) },
+							TowerPosition.READ_CENTER),
+					//1 2
+					new Position(BoardPosition.RIGHT_SIDE,
+							TowerPosition.READ_MIDDLE) },
 			{
-					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.POSITION_1),
-					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.POSITION_1) } };
+					//2 0
+					new Position(BoardPosition.LEFT_OPPOSITE,
+							TowerPosition.READ_CORNER),
+					//2 1
+					new Position(BoardPosition.OPPOSITE_SIDE,
+							TowerPosition.READ_MIDDLE),
+					//2 2
+					new Position(BoardPosition.OPPOSITE_RIGHT,
+							TowerPosition.READ_CORNER) } };
 
 	private Robot() {
 	}

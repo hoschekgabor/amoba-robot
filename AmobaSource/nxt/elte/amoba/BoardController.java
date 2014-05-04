@@ -16,6 +16,7 @@ public class BoardController {
 	// private variables and classes
 	private BoardPosition position;
 	private int numberOfPositions = BoardPosition.values().length;
+	private int angle = 360 / numberOfPositions;
 
 	/**
 	 * This is the BoardController constructor.
@@ -64,10 +65,10 @@ public class BoardController {
 	
 	public void moveTo(BoardPosition position) {
 		int moving = (position.getIntValue() - this.position.getIntValue()) % numberOfPositions;
-		if (Math.abs(moving) > numberOfPositions/2) {
+		if (Math.abs(moving) > numberOfPositions / 2) {
 			moving = ((int) (Math.signum(moving) * -1) * (numberOfPositions - Math.abs(moving)));
 		}
-		boardMotor.rotate(-90 * moving);
+		boardMotor.rotate(-angle * moving);
 		this.position = position;
 	}
 }
