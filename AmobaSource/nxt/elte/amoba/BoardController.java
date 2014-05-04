@@ -4,7 +4,6 @@ import lejos.nxt.Motor;
 import lejos.nxt.NXTRegulatedMotor;
 import lejos.nxt.SensorPort;
 import lejos.nxt.TouchSensor;
-import lejos.util.Delay;
 
 public class BoardController {
 	// Constant variables	
@@ -16,8 +15,13 @@ public class BoardController {
 
 	// private variables and classes
 	private BoardPosition position;
+	private int numberOfPositions = BoardPosition.values().length;
 
-	// constructor
+	/**
+	 * This is the BoardController constructor.
+	 * @param motorPort
+	 * @param touchSensorPort
+	 */
 	public BoardController(int motorPort, int touchSensorPort) {
 		boardMotor = Motor.getInstance(motorPort);
 		touchSensor = new TouchSensor(SensorPort.getInstance(touchSensorPort));
@@ -59,7 +63,10 @@ public class BoardController {
 	}
 	
 	public void moveTo(BoardPosition position) {
-		int moving = (position.getIntValue() - this.position.getIntValue()) % 4;
+		int moving = (position.getIntValue() - this.position.getIntValue()) % numberOfPositions;
+		if (Math.abs(moving) > numberOfPositions/2) {
+			moving = ((int) (Math.signum(moving) * -1) * (numberOfPositions - Math.abs(moving)));
+		}
 		boardMotor.rotate(-90 * moving);
 		this.position = position;
 	}
