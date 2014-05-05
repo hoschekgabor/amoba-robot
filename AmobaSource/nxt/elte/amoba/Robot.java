@@ -21,42 +21,50 @@ public class Robot {
 	private boolean checked = false; 
 	private Color robotColor;
 	private Color humanColor;
-	private final BoardController boardController = new BoardController(
+	private final BoardController boardController = BoardController.getInstance(
 			MOTOR_C, SENSORPORT_2);
-	private final Tower tower = new Tower(MOTOR_B, MOTOR_A, SENSORPORT_1);
+	private final Tower tower = Tower.getInstance(MOTOR_B, MOTOR_A, SENSORPORT_1);
 	// Pozíciókhoz tartozó board és tower pozíciók
-	// TODO: A pozíciókat még meg kell adni.
 	private final Position[][] positions = {
 			{
 					//0 0
-					new Position(BoardPosition.BASE_LEFT_POSIITION,
-							TowerPosition.READ_CORNER),
+					new Position(BoardPosition.BASE_LEFT_POSITION,
+							TowerPosition.READ_CORNER,
+							TowerPosition.PUSH_CORNER),
 					//0 1
 					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.READ_MIDDLE),
+							TowerPosition.READ_MIDDLE,
+							TowerPosition.PUSH_MIDDLE),
 					//0 2
-					new Position(BoardPosition.RIGHT_BASE,
-							TowerPosition.READ_CORNER) },
+					new Position(BoardPosition.RIGHT_BASE_POSITION,
+							TowerPosition.READ_CORNER,
+							TowerPosition.PUSH_CORNER) },
 			{
 					//1 0
-					new Position(BoardPosition.LEFT_SIDE,
-							TowerPosition.READ_MIDDLE),
+					new Position(BoardPosition.LEFT_SIDE_POSITION,
+							TowerPosition.READ_MIDDLE,
+							TowerPosition.PUSH_MIDDLE),
 					//1 1
-					new Position(BoardPosition.BASE_POSITION,
-							TowerPosition.READ_CENTER),
+					new Position(BoardPosition.RIGHT_BASE_POSITION,
+							TowerPosition.READ_CENTER,
+							TowerPosition.PUSH_CENTER),
 					//1 2
-					new Position(BoardPosition.RIGHT_SIDE,
-							TowerPosition.READ_MIDDLE) },
+					new Position(BoardPosition.RIGHT_SIDE_POSITION,
+							TowerPosition.READ_MIDDLE,
+							TowerPosition.PUSH_MIDDLE) },
 			{
 					//2 0
-					new Position(BoardPosition.LEFT_OPPOSITE,
-							TowerPosition.READ_CORNER),
+					new Position(BoardPosition.LEFT_OPPOSITE_POSITION,
+							TowerPosition.READ_CORNER,
+							TowerPosition.PUSH_CORNER),
 					//2 1
-					new Position(BoardPosition.OPPOSITE_SIDE,
-							TowerPosition.READ_MIDDLE),
+					new Position(BoardPosition.OPPOSITE_SIDE_POSITION,
+							TowerPosition.READ_MIDDLE,
+							TowerPosition.PUSH_MIDDLE),
 					//2 2
-					new Position(BoardPosition.OPPOSITE_RIGHT,
-							TowerPosition.READ_CORNER) } };
+					new Position(BoardPosition.OPPOSITE_RIGHT_POSITION,
+							TowerPosition.READ_CORNER,
+							TowerPosition.PUSH_CORNER) } };
 
 	private Robot() {
 	}
@@ -69,7 +77,7 @@ public class Robot {
 	}
 
 	public void boardInitialPosition() {
-		boardController.moveToBasePosition();
+		boardController.moveTo(BoardPosition.BASE_POSITION);
 	}
 
 	public int printMenu(String[] options, int initChoice, String Question) {
@@ -110,7 +118,7 @@ public class Robot {
 			for (int col = 0; col < 0; col++) {
 				pos = positions[row][col];
 				boardController.moveTo(pos.getBoardPosition());
-				tower.moveTo(pos.getTowerPosition());
+				tower.moveTo(pos.getTowerPositionRead());
 				color = tower.readField();
 				if (color == this.humanColor) {
 					player = PlayerEnum.HUMAN;
@@ -150,12 +158,17 @@ public class Robot {
 		}
 	}
 
-	public void setStep(Step step) throws PlayerSetupException {
+	public void setStep(Step step) throws PlayerSetupException, FatalException {
 		check();
+		if (step.getRow() == 1 && step.getColumn() == 1) {
+			throw new FatalException("I can't push the ball into the center field!");
+		}
 		Position pos = positions[step.getRow()][step.getColumn()];
 		boardController.moveTo(pos.getBoardPosition());
-		tower.moveTo(pos.getTowerPosition());
+		tower.moveTo(pos.getTowerPositionPush());
 		tower.pushBall();
+		tower.moveToBasePosition();
+		boardController.moveToBasePosition();
 	}
 
 	public Color getRobotColor() {

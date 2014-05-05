@@ -6,19 +6,25 @@ package nxt.elte.amoba;
  *
  */
 public class Position {
-	public BoardPosition boardPosition;
-	public TowerPosition towerPosition;
+	private BoardPosition boardPosition;
+	private TowerPosition towerPositionRead;
+	private TowerPosition towerPositionPush;
 
-	public Position(BoardPosition bp, TowerPosition tp) {
+	public Position(BoardPosition bp, TowerPosition tpr, TowerPosition tpp) {
 		boardPosition = bp;
-		towerPosition = tp;
+		towerPositionRead = tpr;
+		towerPositionPush = tpp;
 	}
 	
 	public BoardPosition getBoardPosition() {
 		return boardPosition;
 	}
 
-	public TowerPosition getTowerPosition() {
-		return towerPosition;
-	}	
+	public TowerPosition getTowerPositionRead() {
+		return towerPositionRead;
+	}
+	
+	public TowerPosition getTowerPositionPush() {
+		return towerPositionPush;
+	}
 }

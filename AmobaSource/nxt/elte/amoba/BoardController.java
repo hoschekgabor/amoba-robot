@@ -17,13 +17,15 @@ public class BoardController {
 	private BoardPosition position;
 	private int numberOfPositions = BoardPosition.values().length;
 	private int angle = 360 / numberOfPositions;
+	
+	private static BoardController me = null;
 
 	/**
 	 * This is the BoardController constructor.
 	 * @param motorPort
 	 * @param touchSensorPort
 	 */
-	public BoardController(int motorPort, int touchSensorPort) {
+	private BoardController(int motorPort, int touchSensorPort) {
 		boardMotor = Motor.getInstance(motorPort);
 		touchSensor = new TouchSensor(SensorPort.getInstance(touchSensorPort));
 		boardMotor.setSpeed(MOTOR_SPEED);
@@ -47,20 +49,11 @@ public class BoardController {
 	// private methods
 
 	// public methods
-	public void moveToBasePosition() {
-		moveTo(BoardPosition.BASE_POSITION);
-	}
-	
-	public void moveToOppositeSide() {
-		moveTo(BoardPosition.OPPOSITE_SIDE);
-	}
-	
-	public void moveToLeftSide() {
-		moveTo(BoardPosition.LEFT_SIDE);
-	}
-	
-	public void moveToRightSide() {
-		moveTo(BoardPosition.RIGHT_SIDE);
+	public static BoardController getInstance(int motorPort, int touchSensorPort) {
+		if (me == null) {
+			me = new BoardController(motorPort, touchSensorPort);
+		}
+		return me;
 	}
 	
 	public void moveTo(BoardPosition position) {
@@ -70,5 +63,9 @@ public class BoardController {
 		}
 		boardMotor.rotate(-angle * moving);
 		this.position = position;
+	}
+	
+	public void moveToBasePosition(){
+		this.moveTo(BoardPosition.BASE_POSITION);
 	}
 }

@@ -4,121 +4,168 @@ import lejos.nxt.Button;
 import lejos.nxt.LCD;
 import nxt.elte.amoba.*;
 import nxt.elte.amoba.exception.FatalException;
+import nxt.elte.amoba.exception.PlayerSetupException;
 
 public class Tester {
+	private static BoardController boardCtrl = BoardController.getInstance(Robot.MOTOR_C, Robot.SENSORPORT_2);
+	private static Tower tower = Tower.getInstance(Robot.MOTOR_B, Robot.MOTOR_A,
+			Robot.SENSORPORT_1);
+	private static BoardPosition[] boardPositionArray = BoardPosition.values();
+	private static TowerPosition[] towerPositionArray = TowerPosition.values();
+	private static String movement = "";
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		BoardController boardCtrl = new BoardController(Robot.MOTOR_C,
-				Robot.SENSORPORT_2);
-		String movement = "";
-
+		int result = 0;
+		
+		
+		//testBoardController();
+		//testTower();
+		//testBallPushing();
+		
+		//Robot test
+		Robot robot = Robot.getInstance();
+		robot.setHumanColor(Color.GREEN);
+		robot.setRobotColor(Color.RED);
+		
 		try {
-			// körbejár
-			// -> Base
-			movement = "-> Base";
-			boardCtrl.moveToBasePosition();
-			Tester.print("BasePosition");
-
-			// Base -> Base
-			movement = "Base -> Base";
-			boardCtrl.moveToBasePosition();
-			Tester.print("BasePosition");
-
-			// Base -> Left
-			movement = "Base -> Left";
-			boardCtrl.moveToLeftSide();
-			Tester.print("LeftSide");
-
-			// Left -> Left
-			movement = "Left -> Left";
-			boardCtrl.moveToLeftSide();
-			Tester.print("LeftSide");
-
-			// Left -> Opposite
-			movement = "Left -> Opposite";
-			boardCtrl.moveToOppositeSide();
-			Tester.print("OppositeSide");
-
-			// Opposite -> Opposite
-			movement = "Opposite -> Opposite";
-			boardCtrl.moveToOppositeSide();
-			Tester.print("OppositeSide");
-
-			// Opposite -> Right
-			movement = "Opposite -> Right";
-			boardCtrl.moveToRightSide();
-			Tester.print("RightSide");
-
-			// Right -> Right
-			movement = "Right -> Right";
-			boardCtrl.moveToRightSide();
-			Tester.print("RightSide");
-
-			// Right -> Base
-			movement = "Right -> Base";
-			boardCtrl.moveToBasePosition();
-			Tester.print("BasePosition");
-
-			// körbejár vissza
-			// Base -> Right movement = "Base -> Right";
-			boardCtrl.moveToRightSide();
-			Tester.print("RightSide");
-
-			// Right -> Opposite
-			movement = "Right -> Opposite";
-			boardCtrl.moveToOppositeSide();
-			Tester.print("OppositeSide");
-
-			// Opposite -> Left
-			movement = "Opposite -> Left";
-			boardCtrl.moveToLeftSide();
-			Tester.print("LeftSide");
-
-			// Left -> Base
-			movement = "Left -> Base";
-			boardCtrl.moveToBasePosition();
-			Tester.print("BasePosition");
-
-			// Szembelévőek elérése
-			// Base -> Opposite movement = "Base -> Opposite";
-			boardCtrl.moveToOppositeSide();
-			Tester.print("OppositeSide");
-
-			// Opposite -> Base
-			movement = "Opposite -> Base";
-			boardCtrl.moveToBasePosition();
-			Tester.print("BasePosition");
-
-			// Base -> Right
-			movement = "Base -> Right";
-			boardCtrl.moveToRightSide();
-			Tester.print("RightSide");
-
-			// Right -> Left
-			movement = "Right -> Left";
-			boardCtrl.moveToLeftSide();
-			Tester.print("LeftSide");
-
-			// Left -> Right
-			movement = "Left -> Right";
-			boardCtrl.moveToRightSide();
-			Tester.print("RightSide");
-
-			// Vissza az alaphelyzetbe
-			movement = "Back to Base.";
-			boardCtrl.moveToBasePosition();
-			Tester.print("End of test.");
-		} catch (FatalException e) {
-			LCD.clear();
-			System.out.println(movement + " is not OK.\nExit.");
+			for (int i = 0; i < 3; i++) {
+				for (int j = 0; j < 3; j++) {
+					//if (j != 1 && i != 1) {
+						robot.setStep(new Step(i, j, PlayerEnum.ROBOT));
+						System.out.println(i+","+j);
+						result = Button.waitForAnyPress();
+						if (result == Button.ID_ESCAPE) {
+							throw new FatalException("It isn't OK.");
+						}
+					//}
+				}
+			}
+		} catch (PlayerSetupException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Button.waitForAnyPress();
 		}
-		Button.waitForAnyPress();
 	}
 
-	private static void print(String message) {
+	private static void testBallPushing() {
+		// sarokba
+		boardCtrl.moveTo(BoardPosition.LEFT_OPPOSITE_POSITION);
+		tower.moveTo(TowerPosition.PUSH_CORNER);
+		tower.pushBall();
+		tower.moveTo(TowerPosition.BASE);
+		boardCtrl.moveTo(BoardPosition.BASE_POSITION);
+		
+		// középre
+		boardCtrl.moveTo(BoardPosition.OPPOSITE_SIDE_POSITION);
+		tower.moveTo(TowerPosition.PUSH_MIDDLE);
+		tower.pushBall();
+		tower.moveTo(TowerPosition.BASE);
+		boardCtrl.moveTo(BoardPosition.BASE_POSITION);
+	}
+
+	private static void testTower() {
+		int k = Math.round(towerPositionArray.length/2);
+		
+		try {
+			for (int i = 0; i < k; i++) {
+				testTowerMoving(i, i-1);
+				for (int j = i; j < towerPositionArray.length; j++) {					
+					testTowerMoving(j, i);
+					if (i!=j) testTowerMoving(i, j);
+				}
+			}
+			System.out.println("Movings of tower are OK.");
+		} catch (FatalException e) {
+			LCD.clear();
+			System.out.println(movement + " is not OK.");
+			System.out.println(e.getMessage());
+			Button.waitForAnyPress();
+		}
+		
+		// Vissza az alaphelyzetbe
+		movement = "Tower: Back to Base.";
+		tower.moveTo(towerPositionArray[0]);
+	}
+
+	/**
+	 * This method test the BoardController class.
+	 */
+	private static void testBoardController() {
+		int k = Math.round(boardPositionArray.length/2);
+		
+		try {
+			for (int i = 0; i < k; i++) {
+				testBoardMoving(i, i-1);
+				for (int j = i; j < boardPositionArray.length; j++) {
+					testBoardMoving(j, i);
+					if (i!=j) testBoardMoving(i, j);
+				}
+			}
+			System.out.println("Movings of board are OK.");
+		} catch (FatalException e) {
+			LCD.clear();
+			System.out.println(movement + " is not OK.");
+			System.out.println(e.getMessage());
+			Button.waitForAnyPress();
+		}
+		
+		// Vissza az alaphelyzetbe
+		movement = "Board: Back to Base.";
+		boardCtrl.moveTo(boardPositionArray[0]);
+		Tester.print("End of test.");
+	}
+
+	/**
+	 * @param i
+	 * @param j
+	 * @return
+	 */
+	private static void testBoardMoving(int i, int j) throws FatalException {
+		if (j == -1) {
+			movement = "-> " + boardPositionArray[i];
+		} else {
+			movement = boardPositionArray[j] + " -> " + boardPositionArray[i];
+		}
+		boardCtrl.moveTo(boardPositionArray[i]);
+		Tester.print(boardPositionArray[i].toString());
+	}
+	
+	/**
+	 * @param i
+	 * @param j
+	 * @return
+	 */
+	private static void testTowerMoving(int i, int j) throws FatalException {
+		Color color = null;
+		
+		if (j == -1) {
+			movement = "-> " + towerPositionArray[i];
+		} else {
+			movement = towerPositionArray[j] + " -> " + towerPositionArray[i];
+		}
+		
+		//Board megfelelő pozícióba állítása.
+		if (towerPositionArray[i].equals(TowerPosition.READ_CORNER) || towerPositionArray[i].equals(TowerPosition.PUSH_CORNER)) {
+			boardCtrl.moveTo(BoardPosition.BASE_LEFT_POSITION);
+		} else {
+			boardCtrl.moveTo(BoardPosition.BASE_POSITION);
+		}
+
+		tower.moveTo(towerPositionArray[i]);
+
+		if (towerPositionArray[i].equals(TowerPosition.READ_CORNER) || towerPositionArray[i].equals(TowerPosition.READ_MIDDLE)
+				|| towerPositionArray[i].equals(TowerPosition.READ_CENTER)) {
+			color = tower.readField();
+			Tester.print(towerPositionArray[i].toString() + "(" + color + ")");
+		} else {
+			Tester.print(towerPositionArray[i].toString());
+		}
+	}
+
+	private static void print(String message) throws FatalException {
 		int result = 0;
 		LCD.clear();
 		LCD.drawString(message, 0, 0);
