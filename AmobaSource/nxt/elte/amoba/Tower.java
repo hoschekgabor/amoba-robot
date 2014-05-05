@@ -69,21 +69,23 @@ public class Tower {
 	}
 
 	public void moveTo(TowerPosition newPosition) {
-		// TODO: Le kell tesztelni.
+		// TODO: Túl nagy a holtjéték. Ezzel valamit kezdeni kell. Egyik lehetőség, hogy minden mozgatást
+		//       az alaphelyzetből indítunk. Ez lassab olvasást eredményez, de legalább működik.
 		int diffAngle = 0;
-		
+		/*
 		if (movingCounter >= 5) {
 			this.initTowerPosition();
 		}
-		
+		*/
 		if (this.position != newPosition) {
 			diffAngle = newPosition.getAngle() - this.position.getAngle();
+			//diffAngle = newPosition.getAngle() - movingMotor.getTachoCount();
 			movingMotor.rotate(diffAngle);
 			if(movingMotor.isStalled())	throw new FatalException("Tower is stalled.");
 			this.position = newPosition;
 		}
 		
-		movingCounter++;
+		//movingCounter++;
 	}
 	
 	public void moveToBasePosition() {
@@ -99,7 +101,13 @@ public class Tower {
 			break;
 		
 		case lejos.robotics.Color.GREEN:
-			color = Color.GREEN;
+			//TODO Tesztelés miatt a zöld is most piros. :-)
+			//color = Color.GREEN;
+			color = Color.RED;
+			break;
+
+		case lejos.robotics.Color.YELLOW:
+			color = Color.YELLOW;
 			break;
 
 		default:

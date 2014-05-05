@@ -2,6 +2,9 @@ package nxt.elte.amoba;
 
 import lejos.nxt.Button;
 import lejos.nxt.LCD;
+import lejos.nxt.SensorPort;
+import lejos.nxt.UltrasonicSensor;
+import lejos.util.Delay;
 import lejos.util.TextMenu;
 import nxt.elte.amoba.exception.FatalException;
 import nxt.elte.amoba.exception.PlayerSetupException;
@@ -23,6 +26,7 @@ public class Robot {
 	private Color humanColor;
 	private final BoardController boardController = BoardController.getInstance(
 			MOTOR_C, SENSORPORT_2);
+	private final UltrasonicSensor us = new UltrasonicSensor(SensorPort.getInstance(SENSORPORT_3));
 	private final Tower tower = Tower.getInstance(MOTOR_B, MOTOR_A, SENSORPORT_1);
 	// Pozíciókhoz tartozó board és tower pozíciók
 	private final Position[][] positions = {
@@ -113,9 +117,24 @@ public class Robot {
 		PlayerEnum player;
 		Color color;
 		ListOfSteps listOfSteps = new ListOfSteps();
+		boolean humanHand = false;
+		
+		// várunk, amíg az emberi játékos nem rakott.
+		while ( !humanHand ){
+			humanHand = (us.getDistance() <= 10);
+		}
+		
+		// valaki itt olálkodott, ezért várunk fél másodpercet
+		Delay.msDelay(500);
+		
+		// megvárjuk, míg elveszi a kezét
+		while (humanHand) {
+			humanHand = (us.getDistance() <= 11);
+		}
 
+		// elvette a kezét, mehet az olvasás
 		for (int row = 0; row < 3; row++) {
-			for (int col = 0; col < 0; col++) {
+			for (int col = 0; col < 3; col++) {
 				pos = positions[row][col];
 				boardController.moveTo(pos.getBoardPosition());
 				tower.moveTo(pos.getTowerPositionRead());
@@ -132,7 +151,11 @@ public class Robot {
 							"Can't read the color of ball on this position: "
 									+ (row + 1) + ", " + (col + 1) + "!");
 				}
-				listOfSteps.addStep(new Step(row, col, player));
+				listOfSteps.addStep(new Step(row+1, col+1, player));
+				
+				// TODO Ezeket majd ki kell kommnetezni, ha már jól működik
+				System.out.println((row+1) + "," + (col+1) + ": " + player);
+				Button.waitForAnyPress();
 			}
 		}
 		return listOfSteps;
@@ -160,10 +183,10 @@ public class Robot {
 
 	public void setStep(Step step) throws PlayerSetupException, FatalException {
 		check();
-		if (step.getRow() == 1 && step.getColumn() == 1) {
+		if (step.getRow() == 2 && step.getColumn() == 2) {
 			throw new FatalException("I can't push the ball into the center field!");
 		}
-		Position pos = positions[step.getRow()][step.getColumn()];
+		Position pos = positions[step.getRow()-1][step.getColumn()-1];
 		boardController.moveTo(pos.getBoardPosition());
 		tower.moveTo(pos.getTowerPositionPush());
 		tower.pushBall();

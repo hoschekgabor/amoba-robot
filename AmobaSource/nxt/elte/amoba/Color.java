@@ -7,5 +7,8 @@ package nxt.elte.amoba;
 public enum Color {
 	RED,
 	GREEN,
-	OTHER,
+	BLACK,
+	YELLOW,
+	OTHER
+	;
 }

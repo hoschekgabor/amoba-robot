@@ -1,5 +1,7 @@
 package nxt.elte.amoba.test;
 
+import java.util.Iterator;
+
 import lejos.nxt.Button;
 import lejos.nxt.LCD;
 import nxt.elte.amoba.*;
@@ -21,33 +23,46 @@ public class Tester {
 		int result = 0;
 		
 		
-		//testBoardController();
-		//testTower();
-		//testBallPushing();
-		
-		//Robot test
-		Robot robot = Robot.getInstance();
-		robot.setHumanColor(Color.GREEN);
-		robot.setRobotColor(Color.RED);
-		
 		try {
-			for (int i = 0; i < 3; i++) {
-				for (int j = 0; j < 3; j++) {
-					//if (j != 1 && i != 1) {
+			//testBoardController();
+			//testTower();
+			//testBallPushing();
+			
+			//Robot test
+			Robot robot = Robot.getInstance();
+			robot.setHumanColor(Color.GREEN);
+			robot.setRobotColor(Color.RED);
+		
+			/*for (int i = 1; i <= 3; i++) {
+				for (int j = 1; j <= 3; j++) {
+					if (j != 2 || i != 2) {
 						robot.setStep(new Step(i, j, PlayerEnum.ROBOT));
 						System.out.println(i+","+j);
 						result = Button.waitForAnyPress();
 						if (result == Button.ID_ESCAPE) {
 							throw new FatalException("It isn't OK.");
 						}
-					//}
+					}
 				}
 			}
-		} catch (PlayerSetupException e) {
+			*/
+			//read table
+			ListOfSteps table = null;
+			table = robot.getUserSteps();
+			System.out.println("Table is readed.");
+			for (int i = 1; i <= 3; i++) {
+				for (int j = 1; j <= 3; j++) {
+					//LCD.clear();
+					System.out.println(i + "," + j + ": " + table.getStep(i, j));
+					Button.waitForAnyPress();
+				}
+			}
+			
+		} catch (Exception e ) { //PlayerSetupException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-			Button.waitForAnyPress();
+			System.out.println(e.getMessage());
 		}
+		Button.waitForAnyPress();
 	}
 
 	private static void testBallPushing() {
@@ -64,6 +79,16 @@ public class Tester {
 		tower.pushBall();
 		tower.moveTo(TowerPosition.BASE);
 		boardCtrl.moveTo(BoardPosition.BASE_POSITION);
+		
+		// center
+		// Ide nem tud rakni a robot
+		/*
+		boardCtrl.moveTo(BoardPosition.BASE_LEFT_POSITION);
+		tower.moveTo(TowerPosition.PUSH_CENTER);
+		tower.pushBall();
+		tower.moveToBasePosition();
+		boardCtrl.moveToBasePosition();
+		*/
 	}
 
 	private static void testTower() {
@@ -71,6 +96,14 @@ public class Tester {
 		
 		try {
 			for (int i = 0; i < k; i++) {
+				testTowerMoving(i, i-1);
+				for (int j = i; j < towerPositionArray.length; j++) {					
+					testTowerMoving(j, i);
+					if (i!=j) testTowerMoving(i, j);
+				}
+			}
+			
+			for (int i = k-1; i > -1; i++) {
 				testTowerMoving(i, i-1);
 				for (int j = i; j < towerPositionArray.length; j++) {					
 					testTowerMoving(j, i);
