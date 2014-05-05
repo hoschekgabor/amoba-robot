@@ -12,7 +12,7 @@ public class ListOfSteps {
 					new Step(3, 3, PlayerEnum.EMPTY),};
 	
 	public PlayerEnum getStep(int row, int column) {
-		int stepNo = (row * 3) + column;
+		int stepNo = ((row-1) * 3) + column-1;
 		PlayerEnum player = steps[stepNo].getPlayer();
 		return player;
 	}
