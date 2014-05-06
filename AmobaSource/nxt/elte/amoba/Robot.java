@@ -99,8 +99,6 @@ public class Robot {
 	 * @param waitForPress
 	 */
 	public void printMessage(String message, boolean waitForPress) {
-		//LCD.clear();
-		LCD.clearDisplay();
 		System.out.println(message);
 		if (waitForPress) {
 			Button.waitForAnyPress();
@@ -119,19 +117,19 @@ public class Robot {
 		Color color;
 		ListOfSteps listOfSteps = new ListOfSteps();
 		boolean humanHand = false;
-		
+
 		// várunk, amíg az emberi játékos nem rakott.
-		while ( !humanHand ){
+		while (!humanHand) {
 			humanHand = (us.getDistance() <= 10);
 		}
-		
+
 		// valaki itt olálkodott, ezért várunk fél másodpercet
 		Delay.msDelay(500);
-		
+
 		// megvárjuk, míg elveszi a kezét
 		while (humanHand) {
 			humanHand = (us.getDistance() <= 11);
-		}
+			}
 
 		// elvette a kezét, mehet az olvasás
 		for (int row = 0; row < 3; row++) {
