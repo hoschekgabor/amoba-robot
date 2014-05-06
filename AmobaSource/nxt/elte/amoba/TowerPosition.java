@@ -12,7 +12,7 @@ public enum TowerPosition {
 	READ_MIDDLE(35,"ReadMiddle"),
 	PUSH_MIDDLE(85,"PushMiddle"),
 	READ_CENTER(60,"ReadCenter"),
-	PUSH_CENTER(90,"PushCenter")
+	PUSH_CENTER(95,"PushCenter")
 	;
 	
 	private int angle;

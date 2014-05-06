@@ -8,7 +8,7 @@ import lejos.nxt.TouchSensor;
 public class BoardController {
 	// Constant variables	
 	private final int MOTOR_SPEED = 140;
-	private final int ANGLE_TO_BASE_POSITION = 12;
+	private final int ANGLE_TO_BASE_POSITION = 10;
 	private final NXTRegulatedMotor boardMotor;
 	private TouchSensor touchSensor;
 	
