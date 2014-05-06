@@ -14,9 +14,9 @@ public class ListOfSteps {
 					new Step(3, 3, PlayerEnum.EMPTY),};
 	
 	public PlayerEnum getStep(int row, int column) {
-		if((row < 1 || row > 3) && (column < 1 || column > 3)) throw new FatalException("Invalid row and column numbers!");
-		else if (row < 1 || row > 3) throw new FatalException("Invalid row number!");
-		else if (column < 1 || column > 3) throw new FatalException("Invalid column number!");
+		if((row < 1 || row > 3) && (column < 1 || column > 3)) throw new FatalException("Invalid row and column numbers! (" + row + "," + column + ")");
+		else if (row < 1 || row > 3) throw new FatalException("Invalid row number! (" + row + "," + column + ")");
+		else if (column < 1 || column > 3) throw new FatalException("Invalid column number! (" + row + "," + column + ")");
 		
 		int stepNo = ((row-1) * 3) + column-1;
 		PlayerEnum player = steps[stepNo].getPlayer();

@@ -8,9 +8,9 @@ public class Step {
 	private PlayerEnum player;
 	
 	public Step(int row, int column, PlayerEnum player) throws FatalException {
-		if((row < 1 || row > 3) && (column < 1 || column > 3)) throw new FatalException("Invalid row and column numbers!");
-		else if (row < 1 || row > 3) throw new FatalException("Invalid row number!");
-		else if (column < 1 || column > 3) throw new FatalException("Invalid column number!");
+		if((row < 1 || row > 3) && (column < 1 || column > 3)) throw new FatalException("Invalid row and column numbers! (" + row + "," + column + ")");
+		else if (row < 1 || row > 3) throw new FatalException("Invalid row number! (" + row + "," + column + ")");
+		else if (column < 1 || column > 3) throw new FatalException("Invalid column number! (" + row + "," + column + ")");
 		
 		this.row = row;
 		this.column = column;

@@ -87,7 +87,7 @@ public class Robot {
 	public int printMenu(String[] options, int initChoice, String Question) {
 		int choice = 1;
 		LCD.clear();
-		TextMenu testMenu = new TextMenu(options, choice, "Choose a test type!");
+		TextMenu testMenu = new TextMenu(options, choice, Question);
 		choice = testMenu.select();
 		return choice;
 	}
@@ -99,8 +99,9 @@ public class Robot {
 	 * @param waitForPress
 	 */
 	public void printMessage(String message, boolean waitForPress) {
-		LCD.clear();
-		LCD.drawString(message, 0, 0);
+		//LCD.clear();
+		LCD.clearDisplay();
+		System.out.println(message);
 		if (waitForPress) {
 			Button.waitForAnyPress();
 		}
@@ -155,7 +156,7 @@ public class Robot {
 				
 				// TODO Ezeket majd ki kell kommnetezni, ha már jól működik
 				System.out.println((row+1) + "," + (col+1) + ": " + player);
-				Button.waitForAnyPress();
+				//Button.waitForAnyPress();
 			}
 		}
 		return listOfSteps;
@@ -183,9 +184,9 @@ public class Robot {
 
 	public void setStep(Step step) throws PlayerSetupException, FatalException {
 		check();
-		if (step.getRow() == 2 && step.getColumn() == 2) {
-			throw new FatalException("I can't push the ball into the center field!");
-		}
+//		if (step.getRow() == 2 && step.getColumn() == 2) {
+//			throw new FatalException("I can't push the ball into the center field!");
+//		}
 		Position pos = positions[step.getRow()-1][step.getColumn()-1];
 		boardController.moveTo(pos.getBoardPosition());
 		tower.moveTo(pos.getTowerPositionPush());

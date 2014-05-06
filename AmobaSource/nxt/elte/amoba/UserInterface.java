@@ -2,6 +2,7 @@ package nxt.elte.amoba;
 
 import nxt.elte.amoba.exception.FatalException;
 import nxt.elte.amoba.exception.PlayerSetupException;
+import lejos.nxt.Button;
 import lejos.util.Delay;
 
 public class UserInterface {
@@ -13,44 +14,80 @@ public class UserInterface {
 	static Robot robot = Robot.getInstance();
 	
 	public static void main(String[] args) {
-		// Játek kezdése
-		startGame();
+		// Ki milyen szinnel van?
+		robot.setHumanColor(Color.GREEN);
+		robot.setRobotColor(Color.RED);
 		
-		for(int i=0; i<numberOfMatches; i++){
-			// Parti kezdése
-			startMatch();
+		try {
+			// Játek kezdése
+			startGame();
 			
-			// L�p�sek
-			do {
-				if (nextPlayer.equals(PlayerEnum.HUMAN)) {
-					// Játekos lép
-					userStep();
-				} else {
-					// Robot lép
-					robotStep();
-				}
-			} while (match.isEndOfMatch().equals(PlayerEnum.UNDONE));
+			for(int i=0; i<numberOfMatches; i++){
+				// Parti kezdése
+				startMatch();
 				
-			endOfMatch();	
+				// Lépések
+				do {
+					if (nextPlayer.equals(PlayerEnum.HUMAN)) {
+						// Játekos lép
+						userStep();
+					} else {
+						// Robot lép
+						robotStep();
+					}
+				} while (match.getBoard().isEndOfMatch().equals(PlayerEnum.UNDONE));
+					
+				endOfMatch();	
+			}
+			endOfGame();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			Button.waitForAnyPress();
 		}
-		endOfGame();
 	}
 	
 	public static void startGame() {
 		// Partik számának lekérdezése
 		String numMatch[] = {"1", "3", "5", "10"};
-		numberOfMatches = robot.printMenu(numMatch, 1, "Hány partit szeretne játszani?");
+		switch (robot.printMenu(numMatch, 1, "Hány partit szeretne játszani?")) {
+		case 0:
+			// 1
+			numberOfMatches = 1;
+			break;
+
+		case 1:
+			// 1
+			numberOfMatches = 3;
+			break;
+			
+		case 2:
+			// 1
+			numberOfMatches = 5;
+			break;
+			
+		case 3:
+			// 1
+			numberOfMatches = 10;
+			break;
+			
+		default:
+			// Ide nem jöhetünk
+			throw new FatalException("UserInterface.startGame() exception - Number of parties.");
+		}
 		
 		// Kezdő játékos lekérdezése
 		String playerDecide[] = {"Játékos", "Robot"};
 		
-		switch (robot.printMenu(playerDecide, 1, "Ki kezdje a j�t�kot?")) {
-		case 2:
+		switch (robot.printMenu(playerDecide, 1, "Ki kezdje a játékot?")) {
+		case 0:
+			nextPlayer = PlayerEnum.HUMAN;;
+			break;
+		case 1:
 			nextPlayer = PlayerEnum.ROBOT;
 			break;
 		default:
-			nextPlayer = PlayerEnum.HUMAN;
-			break;
+			// ide nem jöhetünk
+			throw new FatalException("UserInterface.startGame() exception - Beginner player.");
 		}
 		
 	}
@@ -61,6 +98,7 @@ public class UserInterface {
 		robot.printMessage("Kezdődik a parti!");
 		Delay.msDelay(3000);
 	}
+	
 	public static void userStep() {
 		robot.printMessage("Kérem lépjen");
 		try {
@@ -90,15 +128,15 @@ public class UserInterface {
 	}
 	
 	public static void endOfMatch() {
-		if (match.isEndOfMatch().equals(PlayerEnum.HUMAN)) {
+		if (match.getBoard().isEndOfMatch().equals(PlayerEnum.HUMAN)) {
 			humanWins++;
 			robot.printMessage("Gatulálok, megnyerte a partit!");
 		}
-		if (match.isEndOfMatch().equals(PlayerEnum.ROBOT)) {
+		if (match.getBoard().isEndOfMatch().equals(PlayerEnum.ROBOT)) {
 			robotWins++;
 			robot.printMessage("Éljen, megnyertem a partit!");
 		}
-		Delay.msDelay(3000);
+		robot.printMessage("Kérem szedje le a táblát. Majd nyomjon gombot",true);
 	}
 	
 	public static void endOfGame() {

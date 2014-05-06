@@ -102,14 +102,18 @@ public class Tower {
 		
 		case lejos.robotics.Color.GREEN:
 			//TODO Tesztelés miatt a zöld is most piros. :-)
-			//color = Color.GREEN;
-			color = Color.RED;
+			color = Color.GREEN;
+			//color = Color.RED;
 			break;
 
-		case lejos.robotics.Color.YELLOW:
-			color = Color.YELLOW;
+		/*case lejos.robotics.Color.YELLOW:
+			color = Color.WHITE;
 			break;
-
+			
+		case lejos.robotics.Color.WHITE:
+			color = Color.WHITE;
+			break;
+*/
 		default:
 			break;
 		}

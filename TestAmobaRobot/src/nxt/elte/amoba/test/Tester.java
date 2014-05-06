@@ -25,41 +25,38 @@ public class Tester {
 		
 		try {
 			//testBoardController();
-			testTower();
+			//testTower();
 			//testBallPushing();
 			
 			//Robot test
-			/*
+			
 			Robot robot = Robot.getInstance();
-			robot.setHumanColor(Color.GREEN);
+			robot.setHumanColor(Color.WHITE);
 			robot.setRobotColor(Color.RED);
-			*/
-			/*for (int i = 1; i <= 3; i++) {
+			
+			for (int i = 1; i <= 3; i++) {
 				for (int j = 1; j <= 3; j++) {
-					if (j != 2 || i != 2) {
 						robot.setStep(new Step(i, j, PlayerEnum.ROBOT));
 						System.out.println(i+","+j);
 						result = Button.waitForAnyPress();
 						if (result == Button.ID_ESCAPE) {
 							throw new FatalException("It isn't OK.");
 						}
-					}
 				}
 			}
-			*/
-			/*
+			Button.waitForAnyPress();
+			
 			//read table
 			ListOfSteps table = null;
 			table = robot.getUserSteps();
 			System.out.println("Table is readed.");
-			for (int i = 1; i <= 3; i++) {
+			/*for (int i = 1; i <= 3; i++) {
 				for (int j = 1; j <= 3; j++) {
 					//LCD.clear();
 					System.out.println(i + "," + j + ": " + table.getStep(i, j));
 					Button.waitForAnyPress();
 				}
-			}
-			*/
+			}*/
 		} catch (Exception e ) { //PlayerSetupException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
