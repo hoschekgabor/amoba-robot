@@ -153,10 +153,12 @@ public class Robot {
 				listOfSteps.addStep(new Step(row+1, col+1, player));
 				
 				// TODO Ezeket majd ki kell kommnetezni, ha már jól működik
-				System.out.println((row+1) + "," + (col+1) + ": " + player);
+				//System.out.println((row+1) + "," + (col+1) + ": " + player);
 				//Button.waitForAnyPress();
 			}
 		}
+		boardController.moveToBasePosition();
+		tower.moveToBasePosition();
 		return listOfSteps;
 	}
 
