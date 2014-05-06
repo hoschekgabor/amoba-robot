@@ -23,6 +23,12 @@ public class ListOfSteps {
 		return player;
 	}
 	
+	public Step stepFromList(int row, int column) {
+		int stepNo = ((row - 1)  * 3) + (column - 1);
+		Step step = steps[stepNo];
+		return step;
+	}
+	
 	public void addStep(Step step) {
 		int stepNo = ((step.getRow() - 1) * 3) + (step.getColumn()-1);
 		steps[stepNo].setPlayer(step.getPlayer()); 
